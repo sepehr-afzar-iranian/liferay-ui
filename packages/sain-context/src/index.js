@@ -8,6 +8,8 @@ export const StoreContext = createContext();
 export const useActions = () => useContext(ActionsContext);
 export const useStore = () => useContext(StoreContext);
 
+//  just test
+
 export const StoreProvider = (props) => {
 	const initialState = reducers(props.value, { type: "__INIT__" });
 	const [state, dispatch] = useReducer(reducers, initialState);
