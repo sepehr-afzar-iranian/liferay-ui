@@ -13,5 +13,6 @@
 	"scripts": {
 		"build": "cross-env NODE_ENV=production babel src --root-mode upward --out-dir lib"
 	},
-	"main": "lib/index.js"
+	"main": "lib/index.js",
+	"gitHead": "271e6a6da44f6d552995d84b712a9db876305ceb"
 }
