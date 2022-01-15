@@ -5,7 +5,7 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"description": "Liferay React Portlet Context",
+	"description": "Sain Liferay React Portlet Context",
 	"files": [
 		"lib",
 		"src"
