@@ -1,0 +1,13 @@
+{
+	"name": "@sainui/context",
+	"version": "1.0.0",
+	"description": "Liferay React Portlet Context",
+	"files": [
+		"lib",
+		"src"
+	],
+	"scripts": {
+		"build": "cross-env NODE_ENV=production babel src --root-mode upward --out-dir lib"
+	},
+	"main": "lib/index.js"
+}
