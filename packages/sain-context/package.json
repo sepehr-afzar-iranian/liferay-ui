@@ -11,7 +11,8 @@
 		"src"
 	],
 	"scripts": {
-		"build": "cross-env NODE_ENV=production babel src --root-mode upward --out-dir lib"
+		"build": "cross-env NODE_ENV=production babel src --root-mode upward --out-dir lib",
+		"prepublishOnly": "yarn build && yarn build:types"
 	},
 	"main": "lib/index.js",
 	"gitHead": "c443c887c269f8e791d3745a334137f116ccca51"

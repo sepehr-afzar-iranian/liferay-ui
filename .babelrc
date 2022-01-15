@@ -1,0 +1,4 @@
+{
+	"presets": ["es2015","env", "react"],
+	"plugins": ["css-in-js", "transform-es2015-destructuring", "transform-object-rest-spread"]
+}
