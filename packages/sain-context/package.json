@@ -1,6 +1,6 @@
 {
 	"name": "@sainui/context",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Liferay React Portlet Context",
 	"files": [
 		"lib",
