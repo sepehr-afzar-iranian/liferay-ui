@@ -10,6 +10,10 @@
 		"lib",
 		"src"
 	],
+	"dependencies": {
+		"lodash": "^4.17.15",
+		"react": "16.8.6"
+	},
 	"scripts": {
 		"build": "cross-env NODE_ENV=production babel src --root-mode upward --out-dir lib",
 		"prepublishOnly": "yarn build"
