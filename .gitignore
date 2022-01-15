@@ -1,14 +1,11 @@
-# Directory
-build/
-dist/
-node_modules/
-.dump/
-.idea/
-
-# File
-package-lock.json
-
-# Logs
+bower_components
+build
+coverage
+lib
+node_modules
 *.log
-npm-debug.log*
-lerna-debug.log*
+package-lock.json
+.gradle
+.parcel-cache
+.parcel-ci-builds
+.parcel-ci-build.json
