@@ -1,6 +1,7 @@
 {
 	"name": "@sainui/context",
-	"version": "1.0.2",
+	"repository": "https://github.com/sepehr-afzar-iranian/liferay-ui",
+	"version": "1.0.3",
 	"description": "Liferay React Portlet Context",
 	"files": [
 		"lib",

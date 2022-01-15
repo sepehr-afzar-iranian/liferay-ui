@@ -1,5 +1,4 @@
 {
-	"private": true,
 	"repository": "https://github.com/sepehr-afzar-iranian/liferay-ui",
 	"engines": {
 		"node": ">=14"
