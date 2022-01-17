@@ -1,6 +1,9 @@
 {
 	"name": "@sainui/core",
 	"version": "1.0.13",
+	"publishConfig": {
+		"access": "public"
+	},
 	"repository": "https://github.com/sepehr-afzar-iranian/liferay-ui",
 	"description": "Sain Liferay React Portlet Core",
 	"dependencies": {
@@ -26,5 +29,5 @@
 		"prepublishOnly": "yarn build"
 	},
 	"main": "lib/index.js",
-	"gitHead": "a5e6974fdc1e59253128be6132308b11af4e9762"
+	"gitHead": "52fb762752c3389f327d5bf566d9a500a2bb30de"
 }
