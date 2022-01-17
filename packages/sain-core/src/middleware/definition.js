@@ -4,7 +4,7 @@ import i18n from "../utils/replaceVariables";
 import { direction } from "./direction";
 import merge from "lodash/merge";
 
-export function definitions(name, properties) {
+export function definitions(name, properties, config) {
   const developmentMode = window.Liferay.Language.available ? false : true;
   let app = {
     id: Date.now() + String(Math.random()).substr(2),
@@ -20,8 +20,10 @@ export function definitions(name, properties) {
     app.contextPath = `/o/${app.name}/`;
     app.configuration = configuration(app);
 
-    const { default: override } = require(`../../../../packages/${app.name}/src/configs`);
-    app = merge(app, override);
+    // const { default: override } = require(`../../../../packages/${app.name}/src/configs`);
+    app = merge(app, config);
+
+    console.log(app);
 
     if (app.token.enable) {
       const authorization = require(developmentMode ? "./authorization" : "./authorization");
