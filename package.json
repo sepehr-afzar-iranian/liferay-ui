@@ -1,8 +1,8 @@
 {
-	"private" : true,
+	"private": true,
 	"repository": "https://github.com/sepehr-afzar-iranian/liferay-ui",
 	"engines": {
-		"node": ">=14"
+		"node": ">=10"
 	},
 	"dependencies": {
 		"@clayui/alert": "^3.3.1",

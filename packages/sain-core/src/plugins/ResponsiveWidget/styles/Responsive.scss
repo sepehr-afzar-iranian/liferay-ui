@@ -1,0 +1,9 @@
+@for $i from 1 to 13 {
+    .portlet-size-xs .col-#{$i}-in-xs,
+    .portlet-size-sm .col-#{$i}-in-sm,
+    .portlet-size-md .col-#{$i}-in-md,
+    .portlet-size-lg .col-#{$i}-in-lg {
+        flex: 0 0 percentage($i / 12);
+        max-width: percentage($i / 12);
+    }
+}

@@ -1,0 +1,30 @@
+{
+	"name": "@sainui/core",
+	"version": "1.0.11",
+	"repository": "https://github.com/sepehr-afzar-iranian/liferay-ui",
+	"description": "Sain Liferay React Portlet Core",
+	"devDependencies": {},
+	"dependencies": {
+		"@sainui/context": "^1.0.0",
+		"@clayui/icon": "3.0.0",
+		"@clayui/alert": "^3.3.1",
+		"@clayui/loading-indicator": "^3.0.1",
+		"axios": "^0.20.0",
+		"lodash": "^4.17.15",
+		"qs": "^6.9.1",
+		"react": "16.8.6",
+		"react-dom": "16.8.6",
+		"react-router-dom": "^5.1.2",
+		"rodal": "^1.8.1",
+		"yup": "^0.29.1"
+	},
+	"files": [
+		"lib",
+		"src"
+	],
+	"scripts": {
+		"build": "cross-env NODE_ENV=production babel src --root-mode upward --out-dir lib",
+		"prepublishOnly": "yarn build"
+	},
+	"main": "lib/index.js"
+}

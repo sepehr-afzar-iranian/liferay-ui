@@ -1,0 +1,52 @@
+.alert,
+.alert-default {
+    background: #fff;
+}
+
+.alert {
+    .alert-indicator .lexicon-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-right: 0.5rem;
+    }
+
+    .alert-autofit-row .autofit-col-expand .autofit-section {
+        font-size: 0.9em;
+    }
+}
+
+.alert-notifications {
+    .alert-dismissible {
+        padding-right: 1rem;
+    }
+
+    .alert {
+        margin-top: 0.5rem;
+
+        .close {
+            top: 0;
+            right: 0;
+
+            .lexicon-icon {
+                width: 0.5rem;
+            }
+        }
+
+        .lead {
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+    }
+}
+
+/* RTL */
+.rtl .alert-notifications .alert {
+    .close {
+        left: 0;
+        right: auto;
+    }
+    .alert-indicator .lexicon-icon {
+        margin-left: 0.5rem;
+        margin-right: 0;
+    }
+}

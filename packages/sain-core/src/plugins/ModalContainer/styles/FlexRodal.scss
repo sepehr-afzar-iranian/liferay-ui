@@ -1,0 +1,62 @@
+.flex-rodal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+
+    .rodal-dialog {
+        display: inline;
+        background: none;
+        box-shadow: none;
+        position: relative;
+        width: auto !important;
+        height: auto !important;
+        max-width: 800px;
+        min-width: 350px;
+        padding: 30px;
+    }
+
+    .btn-clean {
+        border: 0;
+        background: none;
+        cursor: pointer;
+    }
+
+    .btn-clean-group .btn-clean {
+        border-left: 1px solid #e6e6e6;
+
+        &:last-child {
+            border-left: 0 !important;
+            border-right: 0 !important;
+        }
+    }
+
+    .divider-top {
+        border-top: 1px solid #e6e6e6;
+    }
+}
+
+.ltr .flex-rodal .btn-clean-group .btn-clean {
+    border-left: 0;
+    border-right: 1px solid #e6e6e6;
+}
+
+.rodal-mask {
+    position: fixed;
+}
+
+.rodal-content {
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.rodal-close {
+    top: 5px;
+    right: 30px;
+
+    &:before,
+    &:after {
+        background: #fff;
+    }
+}

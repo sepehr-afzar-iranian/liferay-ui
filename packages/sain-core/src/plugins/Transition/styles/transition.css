@@ -1,0 +1,12 @@
+.transition-zoom {
+  opacity: 0;
+  transform: scale(0.9);
+  max-height: 0;
+}
+
+.transition-zoom.transition-zoom-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1.5) 0.1s, max-height 2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  max-height: 400px;
+}

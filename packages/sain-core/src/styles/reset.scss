@@ -1,0 +1,80 @@
+$black: #444;
+
+.rtl,
+.ltr {
+  .portlet-wrapper {
+    font-weight: 400;
+    color: $black;
+
+    b,
+    label,
+    .btn,
+    .list-group-header-title,
+    .form-control {
+      font-weight: 500;
+    }
+
+    .list-group-header-title {
+      font-size: 1em;
+    }
+
+    .lead {
+      font-weight: 400;
+    }
+
+    .breadcrumb-container .breadcrumb-go-back {
+      font-weight: 400 !important;
+    }
+
+    .table .table-divider {
+      td,
+      th {
+        font-weight: 500;
+      }
+    }
+
+    .label {
+      border: 0;
+      font-weight: 500;
+      line-height: 18px;
+      padding: 2px 10px 3px !important;
+      letter-spacing: 0;
+    }
+
+    .list-group {
+      font-size: inherit;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .h1,
+    .h2,
+    .h3,
+    .h4,
+    .h5,
+    .h6 {
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+
+    .lead {
+      font-size: 1em;
+    }
+
+    .form-control {
+      font-size: 1em;
+    }
+
+    .font-weight-lighter {
+      font-weight: 300 !important;
+    }
+
+    form {
+      margin: 0;
+    }
+  }
+}

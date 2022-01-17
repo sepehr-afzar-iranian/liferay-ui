@@ -1,0 +1,102 @@
+.rtl .portlet-wrapper,
+.ltr .portlet-wrapper {
+  font-weight: 400;
+  color: #444;
+}
+
+.rtl .portlet-wrapper b,
+.rtl .portlet-wrapper label,
+.rtl .portlet-wrapper .btn,
+.rtl .portlet-wrapper .list-group-header-title,
+.rtl .portlet-wrapper .form-control,
+.ltr .portlet-wrapper b,
+.ltr .portlet-wrapper label,
+.ltr .portlet-wrapper .btn,
+.ltr .portlet-wrapper .list-group-header-title,
+.ltr .portlet-wrapper .form-control {
+  font-weight: 500;
+}
+
+.rtl .portlet-wrapper .list-group-header-title,
+.ltr .portlet-wrapper .list-group-header-title {
+  font-size: 1em;
+}
+
+.rtl .portlet-wrapper .lead,
+.ltr .portlet-wrapper .lead {
+  font-weight: 400;
+}
+
+.rtl .portlet-wrapper .breadcrumb-container .breadcrumb-go-back,
+.ltr .portlet-wrapper .breadcrumb-container .breadcrumb-go-back {
+  font-weight: 400 !important;
+}
+
+.rtl .portlet-wrapper .table .table-divider td,
+.rtl .portlet-wrapper .table .table-divider th,
+.ltr .portlet-wrapper .table .table-divider td,
+.ltr .portlet-wrapper .table .table-divider th {
+  font-weight: 500;
+}
+
+.rtl .portlet-wrapper .label,
+.ltr .portlet-wrapper .label {
+  border: 0;
+  font-weight: 500;
+  line-height: 18px;
+  padding: 2px 10px 3px !important;
+  letter-spacing: 0;
+}
+
+.rtl .portlet-wrapper .list-group,
+.ltr .portlet-wrapper .list-group {
+  font-size: inherit;
+}
+
+.rtl .portlet-wrapper h1,
+.rtl .portlet-wrapper h2,
+.rtl .portlet-wrapper h3,
+.rtl .portlet-wrapper h4,
+.rtl .portlet-wrapper h5,
+.rtl .portlet-wrapper h6,
+.rtl .portlet-wrapper .h1,
+.rtl .portlet-wrapper .h2,
+.rtl .portlet-wrapper .h3,
+.rtl .portlet-wrapper .h4,
+.rtl .portlet-wrapper .h5,
+.rtl .portlet-wrapper .h6,
+.ltr .portlet-wrapper h1,
+.ltr .portlet-wrapper h2,
+.ltr .portlet-wrapper h3,
+.ltr .portlet-wrapper h4,
+.ltr .portlet-wrapper h5,
+.ltr .portlet-wrapper h6,
+.ltr .portlet-wrapper .h1,
+.ltr .portlet-wrapper .h2,
+.ltr .portlet-wrapper .h3,
+.ltr .portlet-wrapper .h4,
+.ltr .portlet-wrapper .h5,
+.ltr .portlet-wrapper .h6 {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.rtl .portlet-wrapper .lead,
+.ltr .portlet-wrapper .lead {
+  font-size: 1em;
+}
+
+.rtl .portlet-wrapper .form-control,
+.ltr .portlet-wrapper .form-control {
+  font-size: 1em;
+}
+
+.rtl .portlet-wrapper .font-weight-lighter,
+.ltr .portlet-wrapper .font-weight-lighter {
+  font-weight: 300 !important;
+}
+
+.rtl .portlet-wrapper form,
+.ltr .portlet-wrapper form {
+  margin: 0;
+}

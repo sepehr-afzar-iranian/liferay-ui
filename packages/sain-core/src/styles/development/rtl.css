@@ -1,0 +1,4408 @@
+@charset "UTF-8";
+:root {
+  --font-family: "Estedad", "IRANSansWeb(FaNum) Light", "Lato", sans-serif;
+  --font-family-by-fontawesome: FontAwesome, "Estedad", "IRANSansWeb(FaNum) Light", "Lato", sans-serif;
+  --black-full: #000;
+  --black-high: #222;
+  --black-low: #444;
+  --black-very-low-opacity: rgba(0, 0, 0, 0.03);
+  --black-low-opacity: rgba(0, 0, 0, 0.08);
+  --black-medium-opacity: rgba(0, 0, 0, 0.3);
+  --grey-high: #666;
+  --grey-very-high: #888;
+  --grey-meduim: #999;
+  --light-full: #fff;
+  --light-grey: #f9f9f9;
+  --light-grey-high: #fafafa;
+  --light-grey-medium: #eee;
+  --light-grey-low: #ddd;
+  --light-blue: #f2f5f9;
+  --light-red: #fffcfc;
+  --light-blue-grey: #e7ecf2;
+  --red-very-low: #f9e6e6;
+  --red-low: #fee9e9;
+  --red-medium: #f78c8c;
+  --red-high: #e8564f;
+  --red-very-high: #b02727;
+  --blue-grey: #7295a6;
+  --dark-red: #530404;
+  --orange-gradient: linear-gradient(147deg, #fe8a39 0%, #fd3838 74%);
+  --blue-gradient: linear-gradient(147deg, #39bdfe 0%, #3885fd 74%);
+  --side-column-color: #f6f8fb;
+  --showmore-trigger-icon: "\f0dc";
+  --clean-table-color: #3d4449;
+  --clean-table-border: rgba(210, 215, 217, 0.75);
+  --clean-table-odd-row-bg: rgba(230, 235, 237, 0.25);
+  --boooya-grey-low: #f5f5f5;
+  --boooya-grey-medium: #dbe0e4;
+  --boooya-grey-high: #7f8fa4;
+  --boooya-grey-dark: #2d3349;
+  --primary-bg: #eceff8;
+  --primary-light: #292f43;
+  --primary-medium: #232839;
+  --primary-dark: #1a1d29;
+  --success-bg: #e0f2f1;
+  --success-light: #009688;
+  --success-medium: #00796b;
+  --success-dark: #004d40;
+  --info-bg: #e1f5fe;
+  --info-light: #03a9f4;
+  --info-medium: #0288d1;
+  --info-dark: #0277bd;
+  --warning-bg: #fff1d5;
+  --warning-light: #e8b526;
+  --warning-medium: #d1a322;
+  --warning-dark: #b48a16;
+  --danger-bg: #ffdde0;
+  --danger-light: #f44336;
+  --danger-medium: #d32f2f;
+  --danger-dark: #b71c1c;
+  --violet-bg: #ede7f6;
+  --violet-light: #673ab7;
+  --violet-medium: #512da8;
+  --violet-dark: #311b92;
+}
+
+/***************************************************
+  ********************** Boooya **********************
+  ***************************************************/
+.app {
+  float: left;
+  width: 100%;
+  min-height: 100%;
+  position: relative;
+  overflow-x: hidden;
+  color: #454545;
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 400;
+  background: #edeff0;
+  transition: margin 100ms linear;
+  margin-left: 0;
+}
+
+.app * {
+  outline: none !important;
+}
+
+.app a {
+  color: #0f9dea;
+}
+
+.app a:hover {
+  color: #0d8dd2;
+}
+
+.app .visible-mobile {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .app .visible-mobile {
+    display: block;
+  }
+}
+
+.app#wrapper {
+  padding: 0;
+}
+
+.app #content {
+  width: 100%;
+  padding-top: 30px;
+}
+
+.app .app-container {
+  float: right;
+  width: 100%;
+  position: relative;
+  background: #edeff0;
+  min-height: calc(100vh - 40px);
+}
+
+.app .app-container .app-sidebar {
+  float: right;
+  width: 300px;
+  z-index: 1;
+}
+
+.app .app-container .app-sidebar.dir-left {
+  float: right;
+}
+
+.app .app-container .app-sidebar.dir-right {
+  float: left;
+}
+
+.app .app-container .app-content {
+  width: 100%;
+  zoom: 1;
+}
+
+.app .app-container .app-content:before {
+  content: "";
+  display: table;
+}
+
+.app .app-container .app-content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.app .app-container .app-content .app-content-separate {
+  float: right;
+  width: 100%;
+}
+
+.app .app-container .app-content .app-content-separate > .app-content-separate-left {
+  float: right;
+  width: 360px;
+  background: #fff;
+  border-left: 1px solid #dbe0e4;
+}
+
+.app .app-container .app-content .app-content-separate > .app-content-separate-left .app-content-separate-panel {
+  padding: 15px;
+  float: right;
+  width: 100%;
+  border-bottom: 1px solid #dbe0e4;
+}
+
+.app .app-container .app-content .app-content-separate > .app-content-separate-content {
+  padding-right: 360px;
+}
+
+.app .app-container .app-content.app-sidebar-left {
+  padding-right: 300px;
+}
+
+.app .app-container .app-content.app-sidebar-right {
+  padding-left: 300px;
+}
+
+.app .app-container.app-sidebar-left-closed .app-sidebar.dir-left {
+  margin-right: -300px;
+}
+
+.app .app-container.app-sidebar-left-closed .app-content.app-sidebar-left {
+  padding-right: 0 !important;
+}
+
+.app .app-container.app-sidebar-right-closed .app-sidebar.dir-right {
+  margin-left: -300px;
+}
+
+.app .app-container.app-sidebar-right-closed .app-content.app-sidebar-right {
+  padding-left: 0 !important;
+}
+
+.app .app-container.app-sidebar-left-minimized .app-sidebar.dir-left {
+  width: 50px;
+}
+
+.app .app-container.app-sidebar-left-minimized .app-content.app-sidebar-left {
+  padding-right: 50px;
+}
+
+.app .app-container.app-sidebar-right-minimized .app-sidebar.dir-right {
+  width: 50px;
+}
+
+.app .app-container.app-sidebar-right-minimized .app-content.app-sidebar-right {
+  padding-left: 50px;
+}
+
+.app .app-overlay {
+  position: fixed;
+  right: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.6);
+  width: 0;
+  height: 0;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 200ms linear;
+}
+
+.app .app-overlay.show {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+
+.app .app-sidepanel {
+  position: fixed;
+  z-index: 1001;
+  top: 0;
+  width: 400px;
+  height: 100%;
+  background: #fff;
+  border-right: 1px solid #dbe0e4;
+  transition: left 100ms linear;
+  left: auto;
+  right: -400px;
+  overflow: auto;
+}
+
+.app.app-sidepanel-open {
+  overflow-x: visible;
+  margin-left: -400px;
+}
+
+.app.app-sidepanel-open .app-sidepanel {
+  right: 0;
+}
+
+.app.app-loaded {
+  transition: margin 100ms linear;
+}
+
+.app.app-loaded .app-container .app-sidebar {
+  transition: all 100ms linear;
+}
+
+.app.app-loaded .app-container .app-content {
+  transition: padding 100ms linear;
+}
+
+.app .app-container .app-content.app-header-fixed {
+  padding-top: 60px;
+}
+
+.app .app-container .app-content.app-header-fixed > .app-header {
+  padding-right: 300px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 9;
+  transition: all 100ms linear;
+}
+
+.app .app-container.app-sidebar-left-minimized .app-content.app-header-fixed > .app-header {
+  padding-right: 50px;
+}
+
+.app .app-container.app-sidebar-right-minimized .app-content.app-header-fixed > .app-header {
+  padding-left: 50px;
+}
+
+.app .app-container.app-sidebar-left-closed .app-content.app-header-fixed > .app-header,
+.app .app-container.app-sidebar-right-closed .app-content.app-header-fixed > .app-header {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.app .app-header {
+  float: right;
+  width: 100%;
+  background: #fff;
+  height: 60px;
+  border-bottom: 1px solid #dbe0e4;
+}
+
+.app .app-header .app-header-logo {
+  float: right;
+  width: 300px;
+  height: 60px;
+  background-color: #272c40;
+  font-size: 0;
+  transition: background 100ms linear;
+}
+
+.app .app-header .app-header-logo:hover {
+  background-color: #252a3c;
+}
+
+.app .app-header .app-header-logo.app-header-logo-condensed {
+  width: 120px;
+}
+
+.app .app-header .app-header-title {
+  float: right;
+  padding: 10px 15px 10px 10px;
+}
+
+.app .app-header .app-header-title h1,
+.app .app-header .app-header-title h2,
+.app .app-header .app-header-title h3,
+.app .app-header .app-header-title h4,
+.app .app-header .app-header-title h5,
+.app .app-header .app-header-title h6,
+.app .app-header .app-header-title .title {
+  font-size: 14px;
+  line-height: 40px;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+}
+
+.app .app-header .app-header-title h1 span,
+.app .app-header .app-header-title h2 span,
+.app .app-header .app-header-title h3 span,
+.app .app-header .app-header-title h4 span,
+.app .app-header .app-header-title h5 span,
+.app .app-header .app-header-title h6 span,
+.app .app-header .app-header-title .title span {
+  font-size: 20px;
+  line-height: 40px;
+  float: right;
+  margin-left: 10px;
+}
+
+.app .app-header .app-header-buttons {
+  float: right;
+  padding: 9px 10px 10px 5px;
+  margin: 0;
+  list-style: none;
+  width: auto;
+}
+
+.app .app-header .app-header-buttons > li {
+  float: right;
+  position: relative;
+  margin-left: 5px;
+  width: auto;
+}
+
+.app .app-header .app-header-buttons > li > .contact {
+  margin-bottom: 0;
+}
+
+.app .app-header .app-header-buttons > li:last-child {
+  margin-left: 0;
+}
+
+.app .app-header .app-header-buttons.app-header-buttons-separated li {
+  padding-left: 5px;
+}
+
+.app .app-header .app-header-buttons.app-header-buttons-separated li:after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  height: 20px;
+  width: 1px;
+  background: #dbe0e4;
+}
+
+.app .app-header .app-header-buttons.app-header-buttons-separated li:last-child {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.app .app-header .app-header-buttons.app-header-buttons-separated li:last-child:after {
+  display: none;
+}
+
+.app .app-header .app-header-buttons.pull-right {
+  padding-left: 15px;
+}
+
+.app .app-header .app-header-navigation {
+  float: right;
+  width: auto;
+}
+
+.app .app-header .app-header-navigation nav {
+  float: right;
+  width: auto;
+}
+
+.app .app-header .app-header-navigation nav > ul {
+  float: right;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.app .app-header .app-header-navigation nav > ul > li {
+  float: right;
+  width: auto;
+  position: relative;
+}
+
+.app .app-header .app-header-navigation nav > ul > li.title {
+  display: none;
+}
+
+.app .app-header .app-header-navigation nav > ul > li > a {
+  display: block;
+  float: right;
+  line-height: 20px;
+  padding: 20px 15px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #1b2431;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 100ms linear;
+}
+
+.app .app-header .app-header-navigation nav > ul > li > a span {
+  display: none;
+}
+
+.app .app-header .app-header-navigation nav > ul > li .app-header-navigation-megamenu {
+  display: none;
+  width: 94%;
+  position: fixed;
+  right: 3%;
+  top: 60px;
+  padding: 15px;
+  margin-top: -1px;
+  border: 1px solid #dbe0e4;
+  z-index: 10;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.app .app-header .app-header-navigation nav > ul > li ul {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  width: 250px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 10;
+  border: 1px solid #dbe0e4;
+  margin-top: -1px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.app .app-header .app-header-navigation nav > ul > li ul > li > a {
+  float: right;
+  width: 100%;
+  padding: 15px 15px;
+  background: #fff;
+  color: #1b2431;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 11px;
+  transition: all 100ms linear;
+}
+
+.app .app-header .app-header-navigation nav > ul > li ul > li > a span {
+  display: none;
+}
+
+.app .app-header .app-header-navigation nav > ul > li ul > li:hover > a {
+  background: #f5f5f5;
+  color: #0f9dea;
+}
+
+.app .app-header .app-header-navigation nav > ul > li:hover > a {
+  color: #0f9dea;
+}
+
+.app .app-header .app-header-navigation nav > ul > li:hover > ul,
+.app .app-header .app-header-navigation nav > ul > li:hover > .app-header-navigation-megamenu {
+  display: block;
+}
+
+.app .app-header .app-header-navigation.app-header-navigation-hover nav > ul > li > a {
+  background: #fff;
+  color: #2d3349;
+  border-bottom: 1px solid #dbe0e4;
+  padding-bottom: 19px;
+}
+
+.app .app-header .app-header-navigation.app-header-navigation-hover nav > ul > li > a:hover {
+  background: #f5f5f5;
+  color: var(--primary-dark);
+}
+
+.app .app-header .app-header-navigation.app-header-navigation-hover nav > ul > li ul > li > a {
+  color: #2d3349;
+}
+
+.app .app-header .app-header-navigation.app-header-navigation-hover nav > ul > li ul > li > a:hover {
+  color: var(--primary-dark);
+}
+
+.app .app-header .app-header-search {
+  float: right;
+  padding: 10px 0;
+  position: relative;
+}
+
+.app .app-header .app-header-search > input {
+  border: 1px solid transparent;
+  float: right;
+  width: 40px;
+  padding: 0 40px 0 0;
+  line-height: 38px;
+  overflow: hidden;
+  transition: width 100ms linear;
+  border-radius: 3px;
+}
+
+.app .app-header .app-header-search > input:focus {
+  width: 220px;
+  border: 1px solid #dbe0e4;
+  background: #fcfcfc;
+}
+
+.app .app-header .app-header-search:after {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  width: 40px;
+  font-size: 20px;
+  height: 40px;
+  line-height: 40px;
+  color: #454545;
+  content: "\e853";
+  font-family: "linearicons";
+  text-align: center;
+  color: #7f8fa4;
+  cursor: pointer;
+}
+
+.app .app-header .container.container-boxed {
+  margin: 0 auto;
+}
+
+.app .app-header .container.container-boxed .app-header-logo {
+  background-position-x: -15px;
+}
+
+.app .app-header .container.container-boxed .app-header-buttons.pull-right {
+  padding-left: 0;
+}
+
+.app .app-footer {
+  float: right;
+  width: 100%;
+}
+
+.app .app-footer.app-footer-default {
+  background: #252a3c;
+  color: #fff;
+  font-size: 13px;
+}
+
+.app .app-footer.app-footer-default a {
+  color: #9ca9b1;
+}
+
+.app .app-footer.app-footer-default .title {
+  font-size: 12px;
+  color: #c5d1cd;
+}
+
+.app .app-footer.app-footer-default .form-control {
+  background: #1d2130;
+  border-color: #1b1f2d;
+}
+
+.app .app-footer.app-footer-default .app-footer-line.darken {
+  background: #1b1f2d;
+}
+
+.app .app-footer.app-footer-default .label-icon {
+  margin-bottom: 5px;
+}
+
+.app .app-footer.app-footer-default .label-icon.label-icon-footer {
+  border: 1px solid #80909a;
+  color: #80909a;
+}
+
+.app .app-footer.app-footer-default .label-icon.label-icon-footer.label-ghost {
+  box-shadow: 0 0 0 3px rgba(128, 144, 154, 0.15);
+}
+
+.app .app-footer.app-footer-default .label-icon.label-icon-footer[href]:hover {
+  background: transparent;
+  border-color: #667781;
+  color: #667781;
+}
+
+.app .app-footer.app-footer-dark {
+  background: #111;
+  color: #666;
+  font-size: 13px;
+}
+
+.app .app-footer.app-footer-dark a {
+  color: #999;
+}
+
+.app .app-footer.app-footer-dark .title {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.app .app-footer.app-footer-dark .form-control {
+  background: #070707;
+  border-color: #040404;
+}
+
+.app .app-footer.app-footer-dark .app-footer-line.darken {
+  background: #040404;
+}
+
+.app .app-footer.app-footer-dark .label-icon {
+  margin-bottom: 5px;
+}
+
+.app .app-footer.app-footer-dark .label-icon.label-icon-footer {
+  border: 1px solid #666;
+  color: #666;
+}
+
+.app .app-footer.app-footer-dark .label-icon.label-icon-footer.label-ghost {
+  box-shadow: 0 0 0 3px rgba(102, 102, 102, 0.15);
+}
+
+.app .app-footer.app-footer-dark .label-icon.label-icon-footer[href]:hover {
+  background: transparent;
+  border-color: #4d4d4d;
+  color: #4d4d4d;
+}
+
+.app .app-footer ul {
+  margin-bottom: 0;
+}
+
+.app .app-footer ul.list-unstyled li {
+  margin-bottom: 5px;
+}
+
+.app .app-footer .copyright {
+  line-height: 22px;
+}
+
+.app .app-footer .title {
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  margin-top: 30px;
+}
+
+.app .app-footer .title img {
+  float: right;
+  margin-left: 10px;
+}
+
+.app .app-footer .title span[class^="icon-"] {
+  font-size: 20px;
+  float: right;
+  margin-left: 10px;
+  line-height: 26px;
+}
+
+.app .app-footer .title:first-child {
+  margin-top: 0;
+}
+
+.app .app-footer .app-footer-line {
+  float: right;
+  width: 100%;
+  padding: 10px;
+}
+
+.app .app-footer .app-footer-line.extended {
+  padding: 30px;
+}
+
+.app .app-footer .app-footer-articles {
+  margin-bottom: 20px;
+}
+
+.app .app-footer .app-footer-articles > div:first-child {
+  padding-left: 0;
+}
+
+.app .app-footer .app-footer-articles img {
+  margin-top: 5px;
+}
+
+.app .app-footer .app-footer-articles:last-child {
+  margin-bottom: 0;
+}
+
+.app .app-footer .container.container-boxed {
+  margin: 0 auto;
+}
+
+@media (max-width: 480px) {
+  .app .row {
+    margin: 0;
+  }
+  .app .row div[class^="col-md-"] {
+    float: right;
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .app .app-container .app-sidebar {
+    float: right;
+    position: relative;
+    width: 100%;
+    display: none;
+    right: auto;
+    left: auto;
+  }
+  .app .app-container .app-sidebar.app-sidebar-open {
+    display: block;
+    margin: 0 !important;
+  }
+  .app .app-container .app-content {
+    float: right;
+    width: 100%;
+  }
+  .app .app-container .app-content.app-content-resizable .app-content-resizable-column {
+    width: 100% !important;
+  }
+  .app .app-container .app-content.app-content-resizable .app-content-resizable-column .ui-resizable-handle {
+    display: none !important;
+  }
+  .app .app-container .app-content .app-content-separate .app-content-separate-left {
+    float: right;
+    width: 100%;
+    border-left: 0;
+  }
+  .app .app-container .app-content .app-content-separate .app-content-separate-left .app-content-separate-content {
+    display: none;
+  }
+  .app .app-container .app-content .app-content-separate .app-content-separate-left.open .app-content-separate-content {
+    display: block;
+  }
+  .app .app-container .app-content .app-content-separate .app-content-separate-content {
+    padding-right: 0;
+    float: right;
+    width: 100%;
+  }
+  .app .app-container .app-content.app-sidebar-left {
+    padding-right: 0;
+  }
+  .app .app-container .app-content.app-sidebar-right {
+    padding-left: 0;
+  }
+  .app .app-container.app-sidebar-left-closed .app-sidebar.dir-left {
+    right: auto;
+  }
+  .app .app-container.app-sidebar-right-closed .app-sidebar.dir-right {
+    left: auto;
+  }
+}
+
+@media (max-width: 1200px) {
+  .app-layout-boxed > .app {
+    float: right;
+    width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .app .app-container.app-header-inside-content {
+    padding-top: 60px;
+  }
+  .app .app-container.app-header-inside-content .app-content .app-header {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 100;
+  }
+  .app .app-header {
+    height: auto;
+  }
+  .app .app-header .container.container-boxed {
+    padding-right: 0;
+  }
+  .app .app-header .app-header-navigation {
+    display: none;
+    float: right;
+    width: 100%;
+    clear: both;
+  }
+  .app .app-header .app-header-navigation nav {
+    width: 100%;
+  }
+  .app .app-header .app-header-navigation nav > ul {
+    width: 100%;
+  }
+  .app .app-header .app-header-navigation nav > ul > li {
+    width: 100%;
+  }
+  .app .app-header .app-header-navigation nav > ul > li > a {
+    width: 100%;
+    border-top: 1px solid #f8f9fa;
+    padding: 15px;
+  }
+  .app .app-header .app-header-navigation nav > ul > li .app-header-navigation-megamenu {
+    position: relative;
+    top: auto;
+    float: right;
+    border: 0;
+    box-shadow: none;
+  }
+  .app .app-header .app-header-navigation nav > ul > li .app-header-navigation-megamenu div[class^="col-md"] {
+    margin-bottom: 0;
+  }
+  .app .app-header .app-header-navigation nav > ul > li ul {
+    position: relative;
+    top: auto;
+    float: right;
+    width: 100%;
+    border: 0;
+    box-shadow: none;
+  }
+  .app .app-header .app-header-navigation nav > ul > li ul > li {
+    width: 100%;
+  }
+  .app .app-header .app-header-navigation nav > ul > li ul > li > a {
+    padding-right: 30px;
+  }
+  .app .app-header .app-header-navigation nav > ul > li:hover > ul,
+  .app .app-header .app-header-navigation nav > ul > li:hover > .app-header-navigation-megamenu {
+    display: none;
+  }
+  .app .app-header .app-header-navigation nav > ul > li.open > ul,
+  .app .app-header .app-header-navigation nav > ul > li.open > .app-header-navigation-megamenu {
+    display: block;
+  }
+  .app .app-header .app-header-navigation.show {
+    display: block;
+  }
+  .app .app-header .app-header-search > input:focus {
+    width: 100px;
+  }
+  .app .app-header .app-header-buttons .contact {
+    padding-right: 0;
+    padding-left: 40px;
+  }
+  .app .app-header .app-header-buttons .contact img,
+  .app .app-header .app-header-buttons .contact .contact-container, .app .app-header .app-header-buttons .contact:after {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  .app .app-footer .app-footer-line {
+    text-align: center;
+  }
+  .app .app-footer .app-footer-line.extended {
+    text-align: right;
+  }
+}
+
+.app .app-navigation-horizontal {
+  float: right;
+  width: 100%;
+  background: #2d3349;
+  position: relative;
+}
+
+.app .app-navigation-horizontal nav > ul {
+  float: right;
+  width: 100%;
+  margin: 0 0 60px 0;
+  padding: 0;
+  list-style: none;
+  padding: 10px 10px 0 0;
+  position: relative;
+}
+
+.app .app-navigation-horizontal nav > ul > li {
+  width: auto;
+  position: static;
+}
+
+.app .app-navigation-horizontal nav > ul > li > a {
+  float: right;
+  padding: 10px 15px 12px 20px;
+  line-height: 20px;
+  color: #c5d1cd;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 5px;
+  transition: color 100ms linear;
+}
+
+.app .app-navigation-horizontal nav > ul > li > a span[class^="icon-"] {
+  float: right;
+  margin-left: 10px;
+  line-height: 20px;
+  min-width: 20px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.app .app-navigation-horizontal nav > ul > li > a .fa {
+  float: right;
+  margin-left: 10px;
+  line-height: 20px;
+  min-width: 20px;
+  text-align: center;
+  font-size: 20px;
+  font-size: 14px;
+}
+
+.app .app-navigation-horizontal nav > ul > li > a:hover {
+  color: #fff;
+}
+
+.app .app-navigation-horizontal nav > ul > li > ul {
+  position: absolute;
+  width: 100%;
+  right: 0;
+  top: 100%;
+  list-style: none;
+  background: #fff;
+  display: none;
+  border-bottom: 1px solid #dbe0e4;
+  padding: 10px 15px 10px 0;
+}
+
+.app .app-navigation-horizontal nav > ul > li > ul > li {
+  width: auto;
+}
+
+.app .app-navigation-horizontal nav > ul > li > ul > li > a {
+  float: right;
+  color: #2d3c52;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  margin-left: 5px;
+  line-height: 20px;
+  transition: all 100ms linear;
+  border-radius: 3px;
+}
+
+.app .app-navigation-horizontal nav > ul > li > ul > li > a:hover {
+  color: #1b2431;
+  background: #f5f5f5;
+}
+
+.app .app-navigation-horizontal nav > ul > li > ul > li.active > a {
+  color: #1b2431;
+  background: #f5f5f5;
+}
+
+.app .app-navigation-horizontal nav > ul > li.openable > a {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 3px;
+}
+
+.app .app-navigation-horizontal nav > ul > li.openable.active > a {
+  background: #fff;
+}
+
+.app .app-navigation-horizontal nav > ul > li.active > a {
+  color: #1b2431;
+}
+
+.app .app-navigation-horizontal nav > ul > li.active > ul {
+  display: block;
+}
+
+.app .app-navigation-horizontal .container.container-boxed {
+  margin: 0 auto;
+}
+
+.app .app-navigation-horizontal .container.container-boxed > nav > ul {
+  padding-right: 0;
+}
+
+.app .app-navigation-horizontal .container.container-boxed > nav > ul > li > ul {
+  padding-right: 0;
+}
+
+.app .app-navigation-horizontal .container.container-boxed:before {
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  height: 61px;
+  width: 100%;
+  background: #fff;
+  content: " ";
+  border-bottom: 1px solid #dbe0e4;
+}
+
+@media (max-width: 992px) {
+  .app .app-navigation-horizontal {
+    display: none;
+  }
+  .app .app-navigation-horizontal .container.container-boxed {
+    padding: 0;
+  }
+  .app .app-navigation-horizontal .container.container-boxed:before {
+    display: none;
+  }
+  .app .app-navigation-horizontal nav > ul {
+    margin: 0;
+    padding: 0;
+  }
+  .app .app-navigation-horizontal nav > ul > li {
+    width: 100%;
+  }
+  .app .app-navigation-horizontal nav > ul > li > a {
+    padding: 15px 20px 15px;
+    width: 100%;
+  }
+  .app .app-navigation-horizontal nav > ul > li.openable.active > a {
+    background: transparent;
+    color: #fff;
+  }
+  .app .app-navigation-horizontal nav > ul > li > ul {
+    position: relative;
+    float: right;
+    width: 100%;
+    padding: 5px;
+  }
+  .app .app-navigation-horizontal nav > ul > li > ul > li {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  .app .app-navigation-horizontal nav > ul > li > ul > li > a {
+    width: 100%;
+  }
+  .app .app-navigation-horizontal nav > ul > li:last-child {
+    margin-bottom: 0;
+  }
+  .app .app-navigation-horizontal.show {
+    display: block;
+  }
+}
+
+.app h2 {
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 15px;
+}
+
+.app h2 [class^="icon-"],
+.app h2 .fa {
+  line-height: 28px;
+}
+
+.app .form-control {
+  height: 40px;
+  border-color: #dbe0e4;
+  color: #454545;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: none;
+}
+
+.app .form-control:focus {
+  outline: none;
+  border-color: #ccd3d9;
+  box-shadow: none;
+}
+
+.app .form-control[multiple] {
+  padding: 5px 0;
+}
+
+.app .form-control[multiple] option {
+  padding: 3px 5px;
+  margin-bottom: 3px;
+}
+
+.app .form-control[readonly] {
+  color: #7f8fa4;
+}
+
+.app .form-control[disabled] {
+  opacity: 0.5;
+}
+
+.app .form-control[type="file"] {
+  padding-top: 8px;
+}
+
+.app .form-group,
+.app .input-group {
+  margin-bottom: 15px;
+  float: right;
+  width: 100%;
+  position: relative;
+}
+
+.app .form-group .input-group {
+  margin-bottom: 0;
+}
+
+.app .form-group > label + .help-block {
+  margin-top: -5px;
+  margin-bottom: 10px;
+}
+
+.app .form-group:last-child {
+  margin-bottom: 0;
+}
+
+.app .btn {
+  padding: 5px 20px;
+  line-height: 28px;
+  text-decoration: none;
+  font-weight: 400;
+  transition: all 100ms ease-in;
+  font-size: 0.9em;
+  white-space: nowrap;
+}
+
+.app .btn.btn-default {
+  border-color: #dbe0e4;
+  background: #fff;
+  color: #454545;
+}
+
+.app .btn.btn-default:hover, .app .btn.btn-default.active {
+  border-color: #ccd3d9;
+  background: #f7f7f7;
+  color: #383838;
+}
+
+.app .btn.btn-default:active {
+  border-color: #ccd3d9;
+  background: #f7f7f7;
+  color: #383838;
+}
+
+.app .btn.btn-default:active:focus {
+  border-color: #ccd3d9;
+  background: #f7f7f7;
+  color: #383838;
+}
+
+.app .btn.btn-default:focus {
+  border-color: #ccd3d9;
+  background: #f7f7f7;
+  color: #454545;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.app .btn.btn-default.active {
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.app .btn.btn-default:active {
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.app .btn.btn-default:active:focus {
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.app .btn.btn-default:focus.btn-icon-fixed span,
+.app .btn.btn-default.active.btn-icon-fixed span {
+  border-color: #ccd3d9;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.app .btn.btn-default:active.btn-icon-fixed span,
+.app .btn.btn-default:active:focus.btn-icon-fixed span {
+  border-color: #ccd3d9;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.app .btn.btn-default.btn-clean {
+  background: transparent;
+  color: #fff;
+  color: #454545;
+}
+
+.app .btn.btn-default.btn-clean:hover {
+  color: #454545;
+  background: #fff;
+  border-color: #fff;
+  border-color: #bec7ce;
+  color: #2b2b2b;
+}
+
+.app .btn.btn-default.btn-clean:active {
+  color: #454545;
+  background: #fff;
+  border-color: #fff;
+  border-color: #bec7ce;
+  color: #2b2b2b;
+}
+
+.app .btn.btn-default.btn-clean:active:focus {
+  color: #454545;
+  background: #fff;
+  border-color: #fff;
+  border-color: #bec7ce;
+  color: #2b2b2b;
+}
+
+.app .btn.btn-default.btn-rounded {
+  border-radius: 20px;
+}
+
+.app .btn.btn-default.btn-icon-fixed span[class^="icon-"], .app .btn.btn-default.btn-icon-fixed span.fa {
+  border-left: 1px solid #dbe0e4;
+  background: #f7f7f7;
+}
+
+.app .btn.btn-primary {
+  border-color: var(--primary-medium);
+  background: var(--primary-light);
+  color: #fff;
+}
+
+.app .btn.btn-primary:hover, .app .btn.btn-primary.active {
+  border-color: var(--primary-dark);
+  background: var(--primary-medium);
+  color: #f2f2f2;
+}
+
+.app .btn.btn-primary:active {
+  border-color: var(--primary-dark);
+  background: var(--primary-medium);
+  color: #f2f2f2;
+}
+
+.app .btn.btn-primary:active:focus {
+  border-color: var(--primary-dark);
+  background: var(--primary-medium);
+  color: #f2f2f2;
+}
+
+.app .btn.btn-primary:focus {
+  border-color: var(--primary-dark);
+  background: var(--primary-medium);
+  color: #fff;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.app .btn.btn-primary.active {
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.app .btn.btn-primary:active {
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.app .btn.btn-primary:active:focus {
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.app .btn.btn-primary:focus.btn-icon-fixed span,
+.app .btn.btn-primary.active.btn-icon-fixed span {
+  border-color: var(--primary-dark);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.app .btn.btn-primary:active.btn-icon-fixed span,
+.app .btn.btn-primary:active:focus.btn-icon-fixed span {
+  border-color: var(--primary-dark);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.app .btn.btn-primary.btn-clean {
+  background: transparent;
+  color: var(--primary-light);
+}
+
+.app .btn.btn-primary.btn-clean:hover {
+  color: #fff;
+  background: var(--primary-light);
+  border-color: var(--primary-light);
+}
+
+.app .btn.btn-primary.btn-clean:active {
+  color: #fff;
+  background: var(--primary-light);
+  border-color: var(--primary-light);
+}
+
+.app .btn.btn-primary.btn-clean:active:focus {
+  color: #fff;
+  background: var(--primary-light);
+  border-color: var(--primary-light);
+}
+
+.app .btn.btn-primary.btn-rounded {
+  border-radius: 20px;
+}
+
+.app .btn.btn-primary.btn-icon-fixed span[class^="icon-"], .app .btn.btn-primary.btn-icon-fixed span.fa {
+  border-left: 1px solid var(--primary-medium);
+  background: var(--primary-medium);
+}
+
+.app .btn.btn-success {
+  border-color: var(--success-medium);
+  background: var(--success-light);
+  color: #fff;
+}
+
+.app .btn.btn-success:hover, .app .btn.btn-success.active {
+  border-color: var(--success-dark);
+  background: var(--success-medium);
+  color: #f2f2f2;
+}
+
+.app .btn.btn-success:active {
+  border-color: var(--success-dark);
+  background: var(--success-medium);
+  color: #f2f2f2;
+}
+
+.app .btn.btn-success:active:focus {
+  border-color: var(--success-dark);
+  background: var(--success-medium);
+  color: #f2f2f2;
+}
+
+.app .btn.btn-success:focus {
+  border-color: var(--success-dark);
+  background: var(--success-medium);
+  color: #fff;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.app .btn.btn-success.active {
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.app .btn.btn-success:active {
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.app .btn.btn-success:active:focus {
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.app .btn.btn-success:focus.btn-icon-fixed span,
+.app .btn.btn-success.active.btn-icon-fixed span {
+  border-color: var(--success-dark);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.app .btn.btn-success:active.btn-icon-fixed span,
+.app .btn.btn-success:active:focus.btn-icon-fixed span {
+  border-color: var(--success-dark);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.app .btn.btn-success.btn-clean {
+  background: transparent;
+  color: var(--success-light);
+}
+
+.app .btn.btn-success.btn-clean:hover {
+  color: #fff;
+  background: var(--success-light);
+  border-color: var(--success-light);
+}
+
+.app .btn.btn-success.btn-clean:active {
+  color: #fff;
+  background: var(--success-light);
+  border-color: var(--success-light);
+}
+
+.app .btn.btn-success.btn-clean:active:focus {
+  color: #fff;
+  background: var(--success-light);
+  border-color: var(--success-light);
+}
+
+.app .btn.btn-success.btn-rounded {
+  border-radius: 20px;
+}
+
+.app .btn.btn-success.btn-icon-fixed span[class^="icon-"], .app .btn.btn-success.btn-icon-fixed span.fa {
+  border-left: 1px solid var(--success-medium);
+  background: var(--success-medium);
+}
+
+.app .btn.btn-info {
+  border-color: var(--info-medium);
+  background: var(--info-light);
+  color: #fff;
+}
+
+.app .btn.btn-info:hover, .app .btn.btn-info.active {
+  border-color: var(--info-dark);
+  background: var(--info-medium);
+  color: #f2f2f2;
+}
+
+.app .btn.btn-info:active {
+  border-color: var(--info-dark);
+  background: var(--info-medium);
+  color: #f2f2f2;
+}
+
+.app .btn.btn-info:active:focus {
+  border-color: var(--info-dark);
+  background: var(--info-medium);
+  color: #f2f2f2;
+}
+
+.app .btn.btn-info:focus {
+  border-color: var(--info-dark);
+  background: var(--info-medium);
+  color: #fff;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.app .btn.btn-info.active {
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.app .btn.btn-info:active {
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.app .btn.btn-info:active:focus {
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.app .btn.btn-info:focus.btn-icon-fixed span,
+.app .btn.btn-info.active.btn-icon-fixed span {
+  border-color: var(--info-dark);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.app .btn.btn-info:active.btn-icon-fixed span,
+.app .btn.btn-info:active:focus.btn-icon-fixed span {
+  border-color: var(--info-dark);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.app .btn.btn-info.btn-clean {
+  background: transparent;
+  color: var(--info-light);
+}
+
+.app .btn.btn-info.btn-clean:hover {
+  color: #fff;
+  background: var(--info-light);
+  border-color: var(--info-light);
+}
+
+.app .btn.btn-info.btn-clean:active {
+  color: #fff;
+  background: var(--info-light);
+  border-color: var(--info-light);
+}
+
+.app .btn.btn-info.btn-clean:active:focus {
+  color: #fff;
+  background: var(--info-light);
+  border-color: var(--info-light);
+}
+
+.app .btn.btn-info.btn-rounded {
+  border-radius: 20px;
+}
+
+.app .btn.btn-info.btn-icon-fixed span[class^="icon-"], .app .btn.btn-info.btn-icon-fixed span.fa {
+  border-left: 1px solid var(--info-medium);
+  background: var(--info-medium);
+}
+
+.app .btn.btn-warning {
+  border-color: var(--warning-medium);
+  background: var(--warning-light);
+  color: #fff;
+}
+
+.app .btn.btn-warning:hover, .app .btn.btn-warning.active {
+  border-color: var(--warning-dark);
+  background: var(--warning-medium);
+  color: #f2f2f2;
+}
+
+.app .btn.btn-warning:active {
+  border-color: var(--warning-dark);
+  background: var(--warning-medium);
+  color: #f2f2f2;
+}
+
+.app .btn.btn-warning:active:focus {
+  border-color: var(--warning-dark);
+  background: var(--warning-medium);
+  color: #f2f2f2;
+}
+
+.app .btn.btn-warning:focus {
+  border-color: var(--warning-dark);
+  background: var(--warning-medium);
+  color: #fff;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.app .btn.btn-warning.active {
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.app .btn.btn-warning:active {
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.app .btn.btn-warning:active:focus {
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.app .btn.btn-warning:focus.btn-icon-fixed span,
+.app .btn.btn-warning.active.btn-icon-fixed span {
+  border-color: var(--warning-dark);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.app .btn.btn-warning:active.btn-icon-fixed span,
+.app .btn.btn-warning:active:focus.btn-icon-fixed span {
+  border-color: var(--warning-dark);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.app .btn.btn-warning.btn-clean {
+  background: transparent;
+  color: var(--warning-light);
+}
+
+.app .btn.btn-warning.btn-clean:hover {
+  color: #fff;
+  background: var(--warning-light);
+  border-color: var(--warning-light);
+}
+
+.app .btn.btn-warning.btn-clean:active {
+  color: #fff;
+  background: var(--warning-light);
+  border-color: var(--warning-light);
+}
+
+.app .btn.btn-warning.btn-clean:active:focus {
+  color: #fff;
+  background: var(--warning-light);
+  border-color: var(--warning-light);
+}
+
+.app .btn.btn-warning.btn-rounded {
+  border-radius: 20px;
+}
+
+.app .btn.btn-warning.btn-icon-fixed span[class^="icon-"], .app .btn.btn-warning.btn-icon-fixed span.fa {
+  border-left: 1px solid var(--warning-medium);
+  background: var(--warning-medium);
+}
+
+.app .btn.btn-danger {
+  border-color: var(--danger-medium);
+  background: var(--danger-light);
+  color: #fff;
+}
+
+.app .btn.btn-danger:hover, .app .btn.btn-danger.active {
+  border-color: var(--danger-dark);
+  background: var(--danger-medium);
+  color: #f2f2f2;
+}
+
+.app .btn.btn-danger:active {
+  border-color: var(--danger-dark);
+  background: var(--danger-medium);
+  color: #f2f2f2;
+}
+
+.app .btn.btn-danger:active:focus {
+  border-color: var(--danger-dark);
+  background: var(--danger-medium);
+  color: #f2f2f2;
+}
+
+.app .btn.btn-danger:focus {
+  border-color: var(--danger-dark);
+  background: var(--danger-medium);
+  color: #fff;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.app .btn.btn-danger.active {
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.app .btn.btn-danger:active {
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.app .btn.btn-danger:active:focus {
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.app .btn.btn-danger:focus.btn-icon-fixed span,
+.app .btn.btn-danger.active.btn-icon-fixed span {
+  border-color: var(--danger-dark);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.app .btn.btn-danger:active.btn-icon-fixed span,
+.app .btn.btn-danger:active:focus.btn-icon-fixed span {
+  border-color: var(--danger-dark);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.app .btn.btn-danger.btn-clean {
+  background: transparent;
+  color: var(--danger-light);
+}
+
+.app .btn.btn-danger.btn-clean:hover {
+  color: #fff;
+  background: var(--danger-light);
+  border-color: var(--danger-light);
+}
+
+.app .btn.btn-danger.btn-clean:active {
+  color: #fff;
+  background: var(--danger-light);
+  border-color: var(--danger-light);
+}
+
+.app .btn.btn-danger.btn-clean:active:focus {
+  color: #fff;
+  background: var(--danger-light);
+  border-color: var(--danger-light);
+}
+
+.app .btn.btn-danger.btn-rounded {
+  border-radius: 20px;
+}
+
+.app .btn.btn-danger.btn-icon-fixed span[class^="icon-"], .app .btn.btn-danger.btn-icon-fixed span.fa {
+  border-left: 1px solid var(--danger-medium);
+  background: var(--danger-medium);
+}
+
+.app .btn.btn-link {
+  border-color: transparent;
+  background: transparent;
+  color: #7f8fa4;
+}
+
+.app .btn.btn-link:hover, .app .btn.btn-link.active {
+  border-color: transparent;
+  background: transparent;
+  color: #708299;
+}
+
+.app .btn.btn-link:active {
+  border-color: transparent;
+  background: transparent;
+  color: #708299;
+}
+
+.app .btn.btn-link:active:focus {
+  border-color: transparent;
+  background: transparent;
+  color: #708299;
+}
+
+.app .btn.btn-link:focus {
+  border-color: transparent;
+  background: transparent;
+  color: #7f8fa4;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: none;
+}
+
+.app .btn.btn-link.active {
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: none;
+}
+
+.app .btn.btn-link:active {
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: none;
+}
+
+.app .btn.btn-link:active:focus {
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: none;
+}
+
+.app .btn.btn-link:focus.btn-icon-fixed span,
+.app .btn.btn-link.active.btn-icon-fixed span {
+  border-color: transparent;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.app .btn.btn-link:active.btn-icon-fixed span,
+.app .btn.btn-link:active:focus.btn-icon-fixed span {
+  border-color: transparent;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.app .btn.btn-link.btn-clean {
+  background: transparent;
+  color: transparent;
+}
+
+.app .btn.btn-link.btn-clean:hover {
+  color: #7f8fa4;
+  background: transparent;
+  border-color: transparent;
+}
+
+.app .btn.btn-link.btn-clean:active {
+  color: #7f8fa4;
+  background: transparent;
+  border-color: transparent;
+}
+
+.app .btn.btn-link.btn-clean:active:focus {
+  color: #7f8fa4;
+  background: transparent;
+  border-color: transparent;
+}
+
+.app .btn.btn-link.btn-rounded {
+  border-radius: 20px;
+}
+
+.app .btn.btn-link.btn-icon-fixed span[class^="icon-"], .app .btn.btn-link.btn-icon-fixed span.fa {
+  border-left: 1px solid transparent;
+  background: transparent;
+}
+
+.app .btn.btn-violet {
+  border-color: var(--violet-medium);
+  background: var(--violet-light);
+  color: #fff;
+}
+
+.app .btn.btn-violet:hover, .app .btn.btn-violet.active {
+  border-color: var(--violet-dark);
+  background: var(--violet-medium);
+  color: #f2f2f2;
+}
+
+.app .btn.btn-violet:active {
+  border-color: var(--violet-dark);
+  background: var(--violet-medium);
+  color: #f2f2f2;
+}
+
+.app .btn.btn-violet:active:focus {
+  border-color: var(--violet-dark);
+  background: var(--violet-medium);
+  color: #f2f2f2;
+}
+
+.app .btn.btn-violet:focus {
+  border-color: var(--violet-dark);
+  background: var(--violet-medium);
+  color: #fff;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.app .btn.btn-violet.active {
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.app .btn.btn-violet:active {
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.app .btn.btn-violet:active:focus {
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.app .btn.btn-violet:focus.btn-icon-fixed span,
+.app .btn.btn-violet.active.btn-icon-fixed span {
+  border-color: var(--violet-dark);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.app .btn.btn-violet:active.btn-icon-fixed span,
+.app .btn.btn-violet:active:focus.btn-icon-fixed span {
+  border-color: var(--violet-dark);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.app .btn.btn-violet.btn-clean {
+  background: transparent;
+  color: var(--violet-light);
+}
+
+.app .btn.btn-violet.btn-clean:hover {
+  color: #fff;
+  background: var(--violet-light);
+  border-color: var(--violet-light);
+}
+
+.app .btn.btn-violet.btn-clean:active {
+  color: #fff;
+  background: var(--violet-light);
+  border-color: var(--violet-light);
+}
+
+.app .btn.btn-violet.btn-clean:active:focus {
+  color: #fff;
+  background: var(--violet-light);
+  border-color: var(--violet-light);
+}
+
+.app .btn.btn-violet.btn-rounded {
+  border-radius: 20px;
+}
+
+.app .btn.btn-violet.btn-icon-fixed span[class^="icon-"], .app .btn.btn-violet.btn-icon-fixed span.fa {
+  border-left: 1px solid var(--violet-medium);
+  background: var(--violet-medium);
+}
+
+.app .btn span[class^="icon-"] {
+  margin: 0 -5px 0 10px;
+  float: right;
+  line-height: 28px;
+  font-size: 20px;
+}
+
+.app .btn span[class^="icon-"].pull-right {
+  margin: 0 10px 0 -5px;
+  float: left;
+}
+
+.app .btn span.fa {
+  font-size: 14px;
+}
+
+.app .btn.btn-default span[class^="icon-"],
+.app .btn.btn-default .fa {
+  color: #7f8fa4;
+}
+
+.app .btn.btn-default span[class^="icon-"] svg,
+.app .btn.btn-default .fa svg {
+  fill: #7f8fa4 !important;
+}
+
+.app .btn.btn-icon-fixed {
+  position: relative;
+  padding-right: 60px;
+}
+
+.app .btn.btn-icon-fixed span[class^="icon-"], .app .btn.btn-icon-fixed span.fa {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40px;
+  height: 38px;
+  line-height: 38px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+.app .btn.btn-icon-fixed span[class^="icon-"] {
+  margin-right: 0;
+}
+
+.app .btn.btn-icon-fixed .icon-text {
+  font-family: "Open Sans", sans-serif !important;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.app .btn.btn-icon-fixed.btn-lg {
+  padding-right: 75px;
+}
+
+.app .btn.btn-icon-fixed.btn-lg span[class^="icon-"], .app .btn.btn-icon-fixed.btn-lg span.fa {
+  height: 48px;
+  width: 50px;
+  line-height: 48px;
+}
+
+.app .btn.btn-icon-fixed.btn-sm {
+  padding-right: 45px;
+}
+
+.app .btn.btn-icon-fixed.btn-sm span[class^="icon-"], .app .btn.btn-icon-fixed.btn-sm span.fa {
+  height: 28px;
+  width: 30px;
+  line-height: 28px;
+}
+
+.app .btn.btn-icon-fixed.btn-xs {
+  padding-right: 35px;
+}
+
+.app .btn.btn-icon-fixed.btn-xs span[class^="icon-"], .app .btn.btn-icon-fixed.btn-xs span.fa {
+  height: 24px;
+  width: 26px;
+  line-height: 24px;
+}
+
+.app .btn.btn-icon-fixed span[class^="icon-"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app .btn.btn-icon-fixed span[class^="icon-"] svg {
+  fill: #fff;
+  height: 1em;
+}
+
+.app .btn.btn-lg {
+  padding: 10px 30px;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.app .btn.btn-lg.btn-icon {
+  width: 50px;
+}
+
+.app .btn.btn-sm {
+  padding: 0 15px;
+  margin: 5px 0;
+}
+
+.app .btn.btn-sm.btn-icon {
+  width: 30px;
+}
+
+.app .btn.btn-xs {
+  padding: 2px 10px;
+  line-height: 20px;
+}
+
+.app .btn.btn-xs.btn-icon {
+  width: 24px;
+}
+
+.app .btn.btn-icon {
+  padding-right: 0;
+  padding-left: 0;
+  width: 40px;
+}
+
+.app .app-heading {
+  float: right;
+  width: 100%;
+  padding: 15px;
+  background: #f9f9f9;
+}
+
+.app .app-heading .icon {
+  float: right;
+  margin-left: 10px;
+  width: 20px;
+  text-align: center;
+  color: #7f8fa4;
+}
+
+.app .app-heading .icon span {
+  line-height: 40px;
+  font-size: 20px;
+}
+
+.app .app-heading .icon.icon-lg {
+  width: 30px;
+  margin-left: 15px;
+}
+
+.app .app-heading .icon.icon-lg span {
+  font-size: 30px;
+}
+
+.app .app-heading .title {
+  float: right;
+}
+
+.app .app-heading .title h1,
+.app .app-heading .title h2,
+.app .app-heading .title h3,
+.app .app-heading .title h4,
+.app .app-heading .title h5,
+.app .app-heading .title h6 {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 600;
+  clear: both;
+  margin-bottom: 5px;
+  color: #1b2431;
+}
+
+.app .app-heading .title h1 small,
+.app .app-heading .title h2 small,
+.app .app-heading .title h3 small,
+.app .app-heading .title h4 small,
+.app .app-heading .title h5 small,
+.app .app-heading .title h6 small {
+  display: inline-block;
+  border-right: 1px solid #dbe0e4;
+  padding-right: 10px;
+  margin-right: 10px;
+}
+
+.app .app-heading .title p {
+  float: right;
+  clear: both;
+  margin-bottom: 0;
+  font-weight: 400;
+  line-height: 15px;
+  margin-top: 0;
+  color: #7f8fa4;
+}
+
+.app .app-heading .heading-elements {
+  float: left;
+  position: relative;
+}
+
+.app .app-heading.title-only {
+  padding: 10px 15px;
+}
+
+.app .app-heading.title-only .title h1,
+.app .app-heading.title-only .title h2,
+.app .app-heading.title-only .title h3,
+.app .app-heading.title-only .title h4,
+.app .app-heading.title-only .title h5,
+.app .app-heading.title-only .title h6 {
+  line-height: 40px;
+  margin-bottom: 0;
+}
+
+.app .app-heading.heading-transparent {
+  margin-top: 10px;
+  background: transparent;
+  border: 0;
+}
+
+.app .app-heading.app-heading-background {
+  padding: 55px 15px;
+  margin-top: 0;
+  border: 0;
+  color: #fff;
+}
+
+.app .app-heading.app-heading-small > .title h1,
+.app .app-heading.app-heading-small > .title h2,
+.app .app-heading.app-heading-small > .title h3,
+.app .app-heading.app-heading-small > .title h4,
+.app .app-heading.app-heading-small > .title h5,
+.app .app-heading.app-heading-small > .title h6 {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.app .app-heading.app-heading-condensed {
+  padding: 15px 0;
+}
+
+.app .app-heading.app-heading-condensed.app-heading-small {
+  padding-top: 0;
+}
+
+.app .app-heading.app-heading-condensed:first-child {
+  margin-top: 0;
+}
+
+.app .app-heading.app-heading-condensed-horizontal {
+  padding: 15px 0;
+}
+
+.app .app-heading.app-heading-light > .icon {
+  color: #f5f5f5;
+}
+
+.app .app-heading.app-heading-light > .title h1,
+.app .app-heading.app-heading-light > .title h2,
+.app .app-heading.app-heading-light > .title h3,
+.app .app-heading.app-heading-light > .title h4,
+.app .app-heading.app-heading-light > .title h5,
+.app .app-heading.app-heading-light > .title h6 {
+  color: #fff;
+}
+
+.app .app-heading.app-heading-light > .title p {
+  color: #f5f5f5;
+}
+
+.app .app-heading.app-heading-lead {
+  padding-top: 25px;
+}
+
+.app .app-heading.app-heading-bordered {
+  border: 1px solid #dbe0e4;
+}
+
+.app .app-heading.app-heading-bordered.app-heading-page {
+  border-top: 0;
+}
+
+.app .app-heading .form-group,
+.app .app-heading .input-group {
+  margin-bottom: 0;
+}
+
+.app .app-heading .container.container-boxed {
+  margin: 0 auto;
+}
+
+.app .app-heading > .contact {
+  width: auto;
+}
+
+.app .app-sidepanel .app-heading {
+  background: transparent;
+}
+
+.app .container {
+  float: right;
+  width: 100%;
+  margin: 15px 0 15px;
+}
+
+.app .container > .app-heading {
+  margin-top: 15px;
+}
+
+.app .container.container-boxed {
+  width: 1200px;
+  margin: 15px auto;
+  float: none;
+  zoom: 1;
+}
+
+.app .container.container-boxed:before {
+  content: "";
+  display: table;
+}
+
+.app .container.container-boxed:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.app .block {
+  float: right;
+  width: 100%;
+  padding: 10px 20px 20px;
+  margin-bottom: 30px;
+  background: #fff;
+  border: 1px solid #dbe0e4 !important;
+  border-radius: 5px;
+}
+
+.app .block.border-0 {
+  border: 0 !important;
+}
+
+.app .block .app-heading {
+  background: transparent;
+}
+
+.app .block > .app-heading {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  padding: 15px 0;
+}
+
+.app .block > .app-heading:first-child {
+  margin-top: 0;
+}
+
+.app .block > .block-heading {
+  float: right;
+  width: 100%;
+  margin-bottom: 15px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 5px;
+}
+
+.app .block > .block-content {
+  float: right;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.app .block > .block-footer {
+  float: right;
+  width: 100%;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 0;
+}
+
+.app .block .block-divider {
+  float: right;
+  width: 100%;
+  height: 1px;
+  background: #dbe0e4;
+  margin-bottom: 15px;
+  position: relative;
+  margin-top: 10px;
+}
+
+.app .block .block-divider span {
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  text-align: center;
+  line-height: 20px;
+  right: 50%;
+  top: -10px;
+  margin-right: -10px;
+}
+
+.app .block .block-divider span.fa {
+  font-size: 14px;
+}
+
+.app .block .block-divider span[class^="icon-"] {
+  font-size: 20px;
+}
+
+.app .block .block-divider.dir-left span {
+  right: 20px;
+  margin-right: 0;
+}
+
+.app .block .block-divider.dir-right span {
+  left: 20px;
+  margin-right: 0;
+}
+
+.app .block .block-divider-text {
+  float: right;
+  width: 100%;
+  padding: 5px 20px;
+  line-height: 20px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  background: #f2f2f2;
+  border-top: 1px solid #dbe0e4;
+  border-bottom: 1px solid #dbe0e4;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.app .block .block-divider-text span {
+  margin-left: 5px;
+}
+
+.app .block .block-divider-text span.fa {
+  font-size: 14px;
+}
+
+.app .block .block-divider-text span[class^="icon-"] {
+  font-size: 20px;
+}
+
+.app .block.block-highlight {
+  box-shadow: 0 4px 20px 5px rgba(0, 0, 0, 0.05);
+}
+
+.app .block.block-highlight-hover {
+  transition: box-shadow 100ms linear;
+}
+
+.app .block.block-highlight-hover:hover {
+  box-shadow: 0 4px 20px 5px rgba(0, 0, 0, 0.05);
+}
+
+.app .block.block-primary {
+  border-top: 2px solid var(--primary-light);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 0;
+}
+
+.app .block.block-success {
+  border-top: 2px solid var(--success-light);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 0;
+}
+
+.app .block.block-warning {
+  border-top: 2px solid var(--warning-light);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 0;
+}
+
+.app .block.block-info {
+  border-top: 2px solid var(--info-light);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 0;
+}
+
+.app .block.block-danger {
+  border-top: 2px solid var(--danger-light);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 0;
+}
+
+.app .block.block-condensed {
+  padding: 0;
+}
+
+.app .block.block-condensed > .app-heading {
+  padding: 20px 20px 15px;
+}
+
+.app .block.block-condensed > .block-heading {
+  padding: 10px 20px;
+  background: #f5f5f5;
+  border-bottom: 1px solid #dbe0e4;
+}
+
+.app .block.block-condensed > .block-heading > .app-heading {
+  padding: 10px 0;
+  background: transparent;
+}
+
+.app .block.block-condensed > .block-content {
+  padding: 0 20px;
+}
+
+.app .block.block-condensed > .block-footer {
+  background: #f5f5f5;
+  border-top: 1px solid #dbe0e4;
+  padding: 20px;
+}
+
+.app .block.block-condensed-v {
+  padding: 0 15px;
+}
+
+.app .block.block-condensed-h {
+  padding: 15px 0;
+}
+
+.app .block.block-toggled {
+  padding-bottom: 10px;
+}
+
+.app .block.block-toggled > .app-heading {
+  margin-bottom: 0;
+}
+
+.app .block.block-toggled > .block-content,
+.app .block.block-toggled > .block-footer {
+  display: none;
+}
+
+.app .block.block-expanded {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  top: 0;
+  z-index: 1050;
+  border: 0;
+  border-radius: 0;
+  overflow: auto;
+}
+
+.app .block.block-arrow-top {
+  position: relative;
+}
+
+.app .block.block-arrow-top:after, .app .block.block-arrow-top:before {
+  bottom: 100%;
+  right: 30px;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.app .block.block-arrow-top:after {
+  border-color: rgba(136, 183, 213, 0);
+  border-bottom-color: #fff;
+  border-width: 10px;
+  margin-right: -10px;
+}
+
+.app .block.block-arrow-top:before {
+  border-color: rgba(194, 225, 245, 0);
+  border-bottom-color: #dbe0e4;
+  border-width: 11px;
+  margin-right: -11px;
+}
+
+@media (max-width: 480px) {
+  .app .app-heading .heading-elements {
+    float: right;
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .app .container.container-boxed {
+    float: right;
+    width: 100%;
+  }
+}
+
+.app .dropdown,
+.app .dropup {
+  float: right;
+}
+
+.app .dropdown-menu {
+  margin-top: 5px;
+  min-width: 220px;
+  background: #fff;
+  border-color: #dbe0e4;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding-bottom: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.app .dropdown-menu > li {
+  width: 100%;
+}
+
+.app .dropdown-menu > li > a {
+  display: block;
+  float: right;
+  width: 100%;
+  padding: 5px 15px;
+  line-height: 30px;
+  transition: background 100ms linear;
+}
+
+.app .dropdown-menu > li > a .label {
+  margin-top: 5px;
+}
+
+.app .dropdown-menu > li > a .label.pull-right {
+  position: absolute;
+  left: 15px;
+}
+
+.app .dropdown-menu > li span[class^="icon-"],
+.app .dropdown-menu > li .fa {
+  float: right;
+  margin-left: 10px;
+  line-height: 30px;
+}
+
+.app .dropdown-menu > li span[class^="icon-"] {
+  font-size: 20px;
+}
+
+.app .dropdown-menu > li .fa {
+  font-size: 14px;
+}
+
+.app .dropdown-menu > li .app-checkbox,
+.app .dropdown-menu > li .app-radio {
+  float: right;
+  width: auto;
+  margin: 5px 0;
+}
+
+.app .dropdown-menu > li.active > a {
+  background: #f5f5f5;
+  color: #454545;
+}
+
+.app .dropdown-menu > li.active > a:hover, .app .dropdown-menu > li.active > a:focus {
+  background: #f5f5f5;
+  color: #454545;
+}
+
+.app .dropdown-menu > li.dropdown-header {
+  margin-top: 5px;
+  padding: 5px 15px;
+  line-height: 30px;
+  font-size: 13px;
+  color: #454545;
+  font-weight: 600;
+}
+
+.app .dropdown-menu > li.dropdown-header.highlight {
+  background: #ededed;
+}
+
+.app .dropdown-menu > li.dropdown-header:first-child {
+  margin-top: 0;
+}
+
+.app .dropdown-menu .divider {
+  margin: 5px 0;
+}
+
+.app .dropdown-menu.dropdown-left {
+  right: auto;
+  left: 0;
+}
+
+.app .dropdown-menu.dropdown-form {
+  padding: 0;
+  width: 340px;
+}
+
+.app .dropdown-menu.dropdown-form > li {
+  padding: 15px;
+}
+
+.app .dropdown-menu.dropdown-form > li span[class^="icon-"],
+.app .dropdown-menu.dropdown-form > li .fa {
+  float: none;
+  margin-left: 0;
+  line-height: 20px;
+}
+
+.app .app-widget-tile {
+  float: right;
+  width: 100%;
+  padding: 10px 15px;
+  min-width: 90px;
+  background: #fff;
+  border: 1px solid #dbe0e4;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  zoom: 1;
+}
+
+.app .app-widget-tile:before {
+  content: "";
+  display: table;
+}
+
+.app .app-widget-tile:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.app .app-widget-tile .row {
+  margin: 0;
+}
+
+.app .app-widget-tile .row [class^="col-"] {
+  padding: 0;
+}
+
+.app .app-widget-tile .line {
+  float: right;
+  width: 100%;
+}
+
+.app .app-widget-tile .title {
+  color: #1b2431;
+  font-size: 11px;
+  font-weight: 600;
+  float: left;
+  text-transform: uppercase;
+}
+
+.app .app-widget-tile .subtitle {
+  color: #1b2431;
+  font-size: 11px;
+  font-weight: 600;
+  float: left;
+  text-transform: uppercase;
+  color: #7f8fa4;
+}
+
+.app .app-widget-tile .intval {
+  font-size: 27px;
+  line-height: 50px;
+  font-weight: 600;
+  text-align: center;
+  float: right;
+  width: 100%;
+}
+
+.app .app-widget-tile .intval small {
+  font-size: 16px;
+  color: #7f8fa4;
+  text-transform: uppercase;
+  line-height: 20px;
+}
+
+.app .app-widget-tile .intval.intval-lg {
+  line-height: 60px;
+  font-size: 34px;
+}
+
+.app .app-widget-tile .icon {
+  float: right;
+  width: 100%;
+  text-align: center;
+  padding-left: 10px;
+}
+
+.app .app-widget-tile .icon .fa {
+  font-size: 42px;
+  line-height: 60px;
+}
+
+.app .app-widget-tile .icon [class^="icon-"] {
+  font-size: 40px;
+  line-height: 70px;
+}
+
+.app .app-widget-tile .icon.icon-right {
+  padding-left: 0;
+  padding-right: 10px;
+}
+
+.app .app-widget-tile .icon.icon-lg .fa {
+  font-size: 56px;
+  line-height: 90px;
+}
+
+.app .app-widget-tile .icon.icon-lg [class^="icon-"] {
+  font-size: 60px;
+  line-height: 90px;
+}
+
+.app .app-widget-tile.app-widget-highlight {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.app .app-widget-tile.app-widget-tile-primary {
+  background: var(--primary-light);
+  border: 1px solid #272c40;
+}
+
+.app .app-widget-tile.app-widget-tile-primary .title,
+.app .app-widget-tile.app-widget-tile-primary .intval,
+.app .app-widget-tile.app-widget-tile-primary .icon {
+  color: #fff;
+}
+
+.app .app-widget-tile.app-widget-tile-primary .subtitle {
+  color: #e6e6e6;
+}
+
+.app .app-widget-tile.app-widget-tile-info {
+  background: var(--info-light);
+  border: 1px solid #4bb3dc;
+}
+
+.app .app-widget-tile.app-widget-tile-info .title,
+.app .app-widget-tile.app-widget-tile-info .intval,
+.app .app-widget-tile.app-widget-tile-info .icon {
+  color: #fff;
+}
+
+.app .app-widget-tile.app-widget-tile-info .subtitle {
+  color: #e6e6e6;
+}
+
+.app .app-widget-tile.app-widget-tile-success {
+  background: var(--success-light);
+  border: 1px solid #73a73b;
+}
+
+.app .app-widget-tile.app-widget-tile-success .title,
+.app .app-widget-tile.app-widget-tile-success .intval,
+.app .app-widget-tile.app-widget-tile-success .icon {
+  color: #fff;
+}
+
+.app .app-widget-tile.app-widget-tile-success .subtitle {
+  color: #e6e6e6;
+}
+
+.app .app-widget-tile.app-widget-tile-warning {
+  background: var(--warning-light);
+  border: 1px solid #f19c00;
+}
+
+.app .app-widget-tile.app-widget-tile-warning .title,
+.app .app-widget-tile.app-widget-tile-warning .intval,
+.app .app-widget-tile.app-widget-tile-warning .icon {
+  color: #fff;
+}
+
+.app .app-widget-tile.app-widget-tile-warning .subtitle {
+  color: #e6e6e6;
+}
+
+.app .app-widget-tile.app-widget-tile-danger {
+  background: var(--danger-light);
+  border: 1px solid #f0494c;
+}
+
+.app .app-widget-tile.app-widget-tile-danger .title,
+.app .app-widget-tile.app-widget-tile-danger .intval,
+.app .app-widget-tile.app-widget-tile-danger .icon {
+  color: #fff;
+}
+
+.app .app-widget-tile.app-widget-tile-danger .subtitle {
+  color: #e6e6e6;
+}
+
+.app .label {
+  position: relative;
+  line-height: 14px;
+  padding: 3px 5px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 3px;
+  transition: all 100ms linear;
+  border: none;
+}
+
+.app .label.label-default {
+  background: #dbe0e4 !important;
+  color: #454545 !important;
+}
+
+.app .label.label-primary {
+  background: var(--primary-light) !important;
+  color: #fff !important;
+}
+
+.app .label.label-success {
+  background: var(--success-light) !important;
+  color: #fff !important;
+}
+
+.app .label.label-info {
+  background: var(--info-light) !important;
+  color: #fff !important;
+}
+
+.app .label.label-warning {
+  background: var(--warning-light) !important;
+  color: #fff !important;
+}
+
+.app .label.label-danger {
+  background: var(--danger-light) !important;
+  color: #fff !important;
+}
+
+.app .label.label-bordered {
+  padding: 2px 5px;
+  background: transparent;
+}
+
+.app .label.label-bordered.label-default {
+  border: 1px solid #dbe0e4;
+  color: #454545;
+}
+
+.app .label.label-bordered.label-default.label-ghost {
+  box-shadow: 0 0 0 3px rgba(219, 224, 228, 0.15);
+}
+
+.app .label.label-bordered.label-default[href]:hover {
+  background: transparent;
+  border-color: #bec7ce;
+  color: #2b2b2b;
+}
+
+.app .label.label-bordered.label-primary {
+  border: 1px solid var(--primary-light);
+  color: var(--primary-light);
+}
+
+.app .label.label-bordered.label-primary.label-ghost {
+  box-shadow: 0 0 0 3px rgba(41, 47, 67, 0.15);
+}
+
+.app .label.label-bordered.label-primary[href]:hover {
+  background: transparent;
+  border-color: #161923;
+  color: #161923;
+}
+
+.app .label.label-bordered.label-success {
+  border: 1px solid var(--success-light);
+  color: var(--success-light);
+}
+
+.app .label.label-bordered.label-success.label-ghost {
+  box-shadow: 0 0 0 3px rgba(118, 171, 60, 0.15);
+}
+
+.app .label.label-bordered.label-success[href]:hover {
+  background: transparent;
+  border-color: #5c852f;
+  color: #5c852f;
+}
+
+.app .label.label-bordered.label-info {
+  border: 1px solid var(--info-light);
+  color: var(--info-light);
+}
+
+.app .label.label-bordered.label-info.label-ghost {
+  box-shadow: 0 0 0 3px rgba(79, 181, 221, 0.15);
+}
+
+.app .label.label-bordered.label-info[href]:hover {
+  background: transparent;
+  border-color: #28a1d1;
+  color: #28a1d1;
+}
+
+.app .label.label-bordered.label-warning {
+  border: 1px solid var(--warning-light);
+  color: var(--warning-light);
+}
+
+.app .label.label-bordered.label-warning.label-ghost {
+  box-shadow: 0 0 0 3px rgba(246, 159, 0, 0.15);
+}
+
+.app .label.label-bordered.label-warning[href]:hover {
+  background: transparent;
+  border-color: #c37e00;
+  color: #c37e00;
+}
+
+.app .label.label-bordered.label-danger {
+  border: 1px solid var(--danger-light);
+  color: var(--danger-light);
+}
+
+.app .label.label-bordered.label-danger.label-ghost {
+  box-shadow: 0 0 0 3px rgba(240, 78, 81, 0.15);
+}
+
+.app .label.label-bordered.label-danger[href]:hover {
+  background: transparent;
+  border-color: #ec1f23;
+  color: #ec1f23;
+}
+
+.app .label.label-rounded {
+  border-radius: 10px;
+  padding-right: 8px;
+  padding-left: 8px;
+}
+
+.app .label.label-ghost {
+  margin: 0 5px 0 0;
+}
+
+.app .badge {
+  padding: 4px 6px 5px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 10px;
+}
+
+.app .badge.badge-primary {
+  background: var(--primary-light);
+  color: #fff;
+}
+
+.app .badge.badge-primary[href]:hover {
+  background: #161923;
+  color: #e6e6e6;
+}
+
+.app .badge.badge-success {
+  background: var(--success-light);
+  color: #fff;
+}
+
+.app .badge.badge-success[href]:hover {
+  background: #5c852f;
+  color: #e6e6e6;
+}
+
+.app .badge.badge-info {
+  background: var(--info-light);
+  color: #fff;
+}
+
+.app .badge.badge-info[href]:hover {
+  background: #28a1d1;
+  color: #e6e6e6;
+}
+
+.app .badge.badge-warning {
+  background: var(--warning-light);
+  color: #fff;
+}
+
+.app .badge.badge-warning[href]:hover {
+  background: #c37e00;
+  color: #e6e6e6;
+}
+
+.app .badge.badge-danger {
+  background: var(--danger-light);
+  color: #fff;
+}
+
+.app .badge.badge-danger[href]:hover {
+  background: #ec1f23;
+  color: #e6e6e6;
+}
+
+.app .badge.badge-bordered {
+  background: transparent;
+  padding: 2px 7px 3px;
+}
+
+.app .badge.badge-bordered.badge-default {
+  border: 2px solid #dbe0e4;
+  color: #454545;
+}
+
+.app .badge.badge-bordered.badge-primary {
+  border: 2px solid var(--primary-light);
+  color: var(--primary-light);
+}
+
+.app .badge.badge-bordered.badge-success {
+  border: 2px solid var(--success-light);
+  color: var(--success-light);
+}
+
+.app .badge.badge-bordered.badge-info {
+  border: 2px solid var(--info-light);
+  color: var(--info-light);
+}
+
+.app .badge.badge-bordered.badge-warning {
+  border: 2px solid var(--warning-light);
+  color: var(--warning-light);
+}
+
+.app .badge.badge-bordered.badge-danger {
+  border: 2px solid var(--danger-light);
+  color: var(--danger-light);
+}
+
+.app .block .app-heading + .list-group {
+  margin-top: -5px;
+}
+
+.app .block > .list-group {
+  margin-bottom: 0;
+}
+
+.app .block > .list-group .list-group-item {
+  border-radius: 0;
+  border-right: 0;
+  border-left: 0;
+}
+
+.app .block > .list-group:last-child .list-group-item:last-child {
+  border-bottom: 0;
+  border-radius: 0 0 5px 5px;
+}
+
+.app .block > .list-group.list-group-inline .list-group-item {
+  border-left: 1px solid #dbe0e4;
+  border-radius: 0;
+}
+
+.app .block > .list-group.list-group-inline:last-child .list-group-item:first-child {
+  border-radius: 0 0 5px 0;
+}
+
+.app .block > .list-group.list-group-inline:last-child .list-group-item:last-child {
+  border-radius: 0 0 0 5px;
+}
+
+.app .contact {
+  position: relative;
+  display: block;
+  float: right;
+  width: 100%;
+  text-decoration: none;
+  line-height: 20px;
+  padding: 10px 0;
+  padding-right: 30px;
+}
+
+.app .contact > img {
+  width: 20px;
+  position: absolute;
+  right: 0;
+  top: 10px;
+}
+
+.app .contact.contact-lg, .app .contact.contact-xlg, .app .contact.contact-single {
+  padding: 0;
+  padding-right: 55px;
+  margin-bottom: 20px;
+}
+
+.app .contact.contact-lg > img,
+.app .contact.contact-xlg > img,
+.app .contact.contact-single > img {
+  top: 0;
+  width: 40px;
+}
+
+.app .contact.contact-lg > .contact-container > a,
+.app .contact.contact-xlg > .contact-container > a,
+.app .contact.contact-single > .contact-container > a,
+.app .contact.contact-lg > .contact-container > span,
+.app .contact.contact-xlg > .contact-container > span,
+.app .contact.contact-single > .contact-container > span,
+.app .contact.contact-lg > .contact-container > p,
+.app .contact.contact-xlg > .contact-container > p,
+.app .contact.contact-single > .contact-container > p {
+  width: 100%;
+  line-height: 20px;
+  margin: 0;
+  padding: 0;
+  display: block;
+  text-decoration: none;
+}
+
+.app .contact.contact-lg > .contact-container > a,
+.app .contact.contact-xlg > .contact-container > a,
+.app .contact.contact-single > .contact-container > a {
+  font-weight: 600;
+}
+
+.app .contact.contact-lg > .contact-container > span,
+.app .contact.contact-xlg > .contact-container > span,
+.app .contact.contact-single > .contact-container > span {
+  color: #7f8fa4;
+}
+
+.app .contact.contact-lg > .contact-container strong,
+.app .contact.contact-xlg > .contact-container strong,
+.app .contact.contact-single > .contact-container strong {
+  font-weight: 600;
+}
+
+.app .contact.contact-lg > .contact-controls,
+.app .contact.contact-xlg > .contact-controls,
+.app .contact.contact-single > .contact-controls {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.app .contact.contact-xlg {
+  padding: 0;
+  padding-right: 70px;
+}
+
+.app .contact.contact-xlg > img {
+  top: 0;
+  width: 60px;
+}
+
+.app .contact.contact-xlg > .contact-controls {
+  top: 10px;
+}
+
+.app .contact.contact-rounded > img {
+  border-radius: 50%;
+}
+
+.app .contact.contact-bordered:after {
+  position: absolute;
+  content: " ";
+  width: 26px;
+  height: 26px;
+  border: 1px solid #dbe0e4;
+  background: transparent;
+  right: -3px;
+  top: 7px;
+}
+
+.app .contact.contact-bordered.contact-rounded:after {
+  border-radius: 50%;
+}
+
+.app .contact.contact-bordered.contact-lg:after {
+  width: 46px;
+  height: 46px;
+  top: -3px;
+}
+
+.app .contact.contact-bordered.contact-xlg:after {
+  width: 66px;
+  height: 66px;
+  top: -3px;
+}
+
+.app .contact.contact-dir-right {
+  padding-right: 0;
+  padding-left: 30px;
+}
+
+.app .contact.contact-dir-right > img {
+  right: auto;
+  left: 3px;
+}
+
+.app .contact.contact-dir-right.contact-lg {
+  padding-left: 50px;
+}
+
+.app .contact.contact-dir-right.contact-xlg {
+  padding-left: 70px;
+}
+
+.app .contact.contact-dir-right.contact-bordered:after {
+  right: auto;
+  left: 0;
+}
+
+.app .contact.contact-faded > img {
+  opacity: 0.7;
+  transition: opacity 100ms linear;
+}
+
+.app .contact.contact-faded:hover > img {
+  opacity: 1;
+}
+
+.app .contact.contact-single {
+  text-align: center;
+  padding: 0;
+}
+
+.app .contact.contact-single > img {
+  position: relative;
+  top: auto;
+  right: auto;
+  display: inline-block;
+  width: 60px;
+  margin: 0 0 15px 0;
+}
+
+.app .contact.contact-single.contact-bordered:after {
+  right: 50%;
+  top: -3px;
+  margin-right: -33px;
+  width: 66px;
+  height: 66px;
+}
+
+.app .contact.contact-single .contact-controls {
+  left: 50%;
+  margin-left: 40px;
+  top: 10px;
+}
+
+.app .contact.contact-single .contact-controls.contact-controls-dir-right {
+  left: auto;
+  right: 50%;
+  margin-left: 0;
+  margin-right: 40px;
+}
+
+.app .contact.status-online:before, .app .contact.status-offline:before, .app .contact.status-away:before {
+  content: " ";
+  position: absolute;
+  right: -10px;
+  top: 14px;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #fff;
+  background: #dbe0e4;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.app .contact.status-online.contact-lg:before, .app .contact.status-offline.contact-lg:before, .app .contact.status-away.contact-lg:before {
+  width: 16px;
+  height: 16px;
+  top: 28px;
+  right: 28px;
+}
+
+.app .contact.status-online.contact-xlg:before, .app .contact.status-offline.contact-xlg:before, .app .contact.status-away.contact-xlg:before {
+  width: 20px;
+  height: 20px;
+  top: 42px;
+  right: 42px;
+}
+
+.app .contact.status-online.contact-single:before, .app .contact.status-offline.contact-single:before, .app .contact.status-away.contact-single:before {
+  width: 16px;
+  height: 16px;
+  right: 50%;
+  top: 48px;
+  margin-right: 14px;
+}
+
+.app .contact.status-online:before {
+  background: var(--success-light);
+}
+
+.app .contact.status-away:before {
+  background: var(--warning-light);
+}
+
+.app .contact.contact-ps-controls {
+  padding-left: 50px;
+}
+
+.app .contact.contact-image-only {
+  width: auto;
+  padding: 0;
+  margin-left: 10px;
+}
+
+.app .contact.contact-image-only img {
+  position: relative;
+  top: 0;
+  float: right;
+}
+
+.app .contact.contact-image-only:after {
+  top: -3px;
+}
+
+.app .app-login-box {
+  width: 360px;
+  margin: 50px auto;
+  background: #fff;
+  border-radius: 5px;
+  zoom: 1;
+  box-shadow: 0 4px 20px 5px rgba(0, 0, 0, 0.05);
+}
+
+.app .app-login-box:before {
+  content: "";
+  display: table;
+}
+
+.app .app-login-box:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.app .app-login-box .app-login-box-user {
+  width: 100%;
+  float: right;
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 30px 30px 0;
+}
+
+.app .app-login-box .app-login-box-user img {
+  width: 100px;
+  border: 1px solid #dbe0e4;
+  border-radius: 3px;
+}
+
+.app .app-login-box .app-login-box-title {
+  float: right;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 0 30px;
+}
+
+.app .app-login-box .app-login-box-title .title {
+  font-size: 18px;
+  font-weight: 400;
+  color: #1b2431;
+  margin-bottom: 5px;
+}
+
+.app .app-login-box .app-login-box-title .subtitle {
+  font-size: 14px;
+  color: #7f8fa4;
+}
+
+.app .app-login-box .app-login-box-container {
+  float: right;
+  width: 100%;
+  padding: 0 30px 30px;
+}
+
+.app .app-login-box .app-login-box-container > .title {
+  float: right;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 400;
+  color: #7f8fa4;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.app .app-login-box .app-login-box-or {
+  float: right;
+  width: 100%;
+  padding: 10px 0 40px;
+}
+
+.app .app-login-box .app-login-box-or .or {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  position: relative;
+  line-height: 40px;
+  text-align: center;
+  font-weight: 700;
+  color: #7f8fa4;
+}
+
+.app .app-login-box .app-login-box-or .or:after {
+  content: " ";
+  width: 40px;
+  height: 40px;
+  border: 1px solid #dbe0e4;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.app .app-login-box .app-login-box-footer {
+  float: right;
+  width: 100%;
+  background: #fafafa;
+  padding: 15px 30px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 0;
+  text-align: center;
+}
+
+.app.app-fh {
+  height: 100%;
+}
+
+.app.app-fh .app-container {
+  height: 100%;
+}
+
+/***************************************************
+  ********************** Global **********************
+   **************************************************/
+@font-face {
+  font-family: "Estedad";
+  src: url(fonts/Estedad.woff2) format("woff2"), url(fonts/Estedad.ttf) format("ttf");
+}
+
+body {
+  font-family: var(--font-family);
+  background: var(--light-grey);
+  color: var(--black-high);
+  overflow-x: hidden;
+}
+
+/***************************************************
+  *********************** APP ************************
+   **************************************************/
+.app {
+  overflow: initial;
+}
+
+.app .app-header {
+  border-bottom: none;
+}
+
+.app .app-header .app-header-logo.app-header-logo-light {
+  width: 160px;
+  float: left;
+  margin-top: -3px;
+}
+
+.app .app-content {
+  height: auto !important;
+}
+
+.app .app-content .app-navigation-horizontal {
+  background: #012056;
+  position: sticky;
+  top: 19px;
+  /* -42px */
+  z-index: 2;
+}
+
+.app .app-content .app-navigation-horizontal nav > ul {
+  margin: 0 0 39px 0;
+  padding: 0;
+}
+
+.app .app-content .app-navigation-horizontal nav > ul > li svg {
+  height: 23px;
+  margin-top: -3px;
+  position: relative;
+  margin-right: 5px;
+  margin-left: -5px;
+  top: -2px;
+}
+
+.app .app-content .app-navigation-horizontal nav > ul > li svg.employee-icon {
+  top: -3px;
+}
+
+.app .app-content .app-navigation-horizontal nav > ul > li.openable svg {
+  display: none;
+}
+
+.app .app-content .app-navigation-horizontal nav > ul > li.openable.active svg {
+  display: inline-block;
+  fill: #fff;
+}
+
+.app .app-content .app-navigation-horizontal nav > ul > li.openable.active > a {
+  padding: 14px 20px 9px 20px;
+  font-weight: 400;
+  font-size: 12px;
+  background: #0e3d86;
+  color: #fff;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  margin-top: -7px;
+}
+
+.app .app-content .app-navigation-horizontal nav > ul > li > a {
+  padding: 8px 15px 14px;
+  font-weight: 400;
+  font-size: 13px;
+  color: #fff;
+}
+
+.app .app-content .app-navigation-horizontal nav > ul > li > ul {
+  background: transparent;
+  border-bottom: none;
+  padding: 0;
+}
+
+.app .app-content .app-navigation-horizontal nav > ul > li > ul > li :hover {
+  background: transparent;
+}
+
+.app .app-content .app-navigation-horizontal nav > ul > li > ul > li.active > a,
+.app .app-content .app-navigation-horizontal nav > ul > li > ul > li.active > a:hover {
+  background: transparent;
+  border-bottom: 2px solid #fff;
+}
+
+.app .app-content .app-navigation-horizontal nav > ul > li > ul > li > a {
+  border-radius: 0;
+  font-weight: normal;
+  color: #fff;
+}
+
+.app .app-content .app-navigation-horizontal nav > ul > li > ul > li > a:hover {
+  transition: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.app .app-content .app-navigation-horizontal .container.container-boxed::before {
+  border-bottom: none;
+  background: #0e3d86;
+  height: 45px;
+  bottom: 0;
+}
+
+.app .app-content .app-navigation-horizontal.hidden-submenu {
+  position: relative;
+  top: 0;
+}
+
+.app .app-content .app-navigation-horizontal.hidden-submenu .container.container-boxed::before {
+  height: 10px;
+}
+
+.app .app-content .app-navigation-horizontal.hidden-submenu nav > ul {
+  margin-bottom: 4px;
+}
+
+.app .app-content .app-navigation-horizontal.hidden-submenu nav > ul ul {
+  display: none;
+}
+
+.app .alerts-button {
+  position: relative;
+}
+
+.app .alerts-button .app-navigation-logo-button-alert {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  text-align: center;
+  line-height: 16px;
+  font-size: 10px;
+  background: var(--danger-light);
+  color: #fff;
+  box-shadow: 0 0 0 3px rgba(240, 78, 81, 0.2);
+  border-radius: 2px;
+}
+
+.app .contact.contact-ps-controls {
+  padding-left: 0;
+  width: auto;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.app .contact.contact-ps-controls .contact-controls {
+  position: static;
+  margin-right: 20px;
+}
+
+.app .btn.btn-default.btn-icon > svg {
+  height: 25px;
+  fill: #999;
+  margin-top: 1px;
+}
+
+.app .app-heading .icon.icon-xl {
+  width: 40px;
+}
+
+.app .app-heading .btn.btn-default.btn-icon > svg {
+  height: 20px;
+  fill: #7f8fa4;
+}
+
+.app .container {
+  float: none;
+  clear: both;
+  margin: 0 auto;
+}
+
+.app .container.container-boxed {
+  float: none;
+}
+
+.app .app-widget-tile .intval {
+  direction: rtl;
+}
+
+.app .app-widget-tile .title,
+.app .app-widget-tile .subtitle {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.app .label {
+  font-weight: 500;
+}
+
+.app .block .icon {
+  fill: #7f8fa4;
+}
+
+.app[data-fluid] .container {
+  width: auto;
+  max-width: unset;
+}
+
+.app label {
+  font-size: 0.9em;
+}
+
+.scrollToTop {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  padding: 8px 11px !important;
+  border: 0;
+  border-radius: 4px;
+  background: #1b1f2d !important;
+  z-index: 1;
+}
+
+.scrollToTop svg {
+  height: 24px;
+  fill: #fff;
+}
+
+/***************************************************
+  *********************** RTL ************************
+  ***************************************************/
+.app.app-rtl .app-header .app-header-buttons {
+  float: left;
+}
+
+.app.app-rtl .app-header .app-header-buttons .contact .user-image {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 20px;
+  background-position: center;
+  background-size: cover;
+}
+
+.app.app-rtl .app-header .app-header-buttons .contact .contact-controls {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-left: 20px;
+  margin-right: 0;
+}
+
+.app.app-rtl .app-header .app-header-buttons .contact .contact-controls .btn.btn-default {
+  border-color: transparent;
+}
+
+.app.app-rtl .app-header .app-header-buttons .contact .contact-controls .btn.btn-default:focus, .app.app-rtl .app-header .app-header-buttons .contact .contact-controls .btn.btn-default.active {
+  border-color: #ccd3d9;
+}
+
+.app.app-rtl .app-header .app-header-buttons .contact .contact-controls .dropdown-menu {
+  min-width: 200px;
+}
+
+.app.app-rtl .app-header .app-header-buttons .contact .contact-controls .dropdown-menu a {
+  font-weight: 300;
+  padding-bottom: 3px;
+}
+
+.app.app-rtl .app-header .app-header-buttons .contact .contact-controls .dropdown-menu a svg {
+  height: 22px;
+  fill: #999;
+  margin-left: 10px;
+  margin-right: 0;
+  position: relative;
+  top: 1px;
+}
+
+.app.app-rtl .app-header .app-header-buttons .contact.contact-lg {
+  padding-left: 55px;
+  padding-right: 0;
+}
+
+.app.app-rtl .app-header .app-header-buttons .contact.contact-lg.contact-bordered::after {
+  left: -3px;
+  right: auto;
+}
+
+.app.app-rtl .app-header .app-header-logo {
+  float: right;
+}
+
+.app.app-rtl .app-header .contact-container {
+  text-align: left;
+}
+
+.app.app-rtl .app-navigation-horizontal nav > ul > li > ul > li > a {
+  margin-right: 0;
+  margin-left: 5px;
+  padding: 7px 10px;
+}
+
+/***************************************************
+  *********************** Demo ***********************
+  ***************************************************/
+[data-widget] [data-widget-icon] {
+  display: none;
+}
+
+/***************************************************
+  ******************* Responsive *********************
+  ***************************************************/
+@media (max-width: 991px) {
+  .app.app-rtl .contact.contact-ps-controls {
+    padding-right: 40px;
+    padding-left: 0;
+  }
+  .app.app-rtl .contact.contact-ps-controls .contact-controls {
+    margin-right: 10px;
+    margin-left: 20px;
+  }
+  .app.app-rtl .contact.contact-ps-controls .contact-controls .dropdown-menu {
+    right: 0;
+    left: auto;
+  }
+  .app .app-header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    border-bottom: 1px solid #dbe0e4;
+  }
+  .app .app-header .app-header-logo.app-header-logo-light {
+    margin-top: 0;
+  }
+  .app .app-content .app-navigation-horizontal {
+    margin: 0 !important;
+    top: 60px;
+  }
+  .app .app-content .app-navigation-horizontal nav > ul {
+    padding: 30px 15px 20px !important;
+    margin: 0;
+  }
+  .app .app-content .app-navigation-horizontal nav > ul > li.openable,
+  .app .app-content .app-navigation-horizontal nav > ul li.openable.active {
+    margin-bottom: 10px;
+  }
+  .app .app-content .app-navigation-horizontal nav > ul > li.openable > a,
+  .app .app-content .app-navigation-horizontal nav > ul li.openable.active > a {
+    margin-top: 0;
+    border-radius: 4px;
+    padding: 12px;
+    display: block;
+    float: none;
+  }
+  .app .app-content .app-navigation-horizontal nav > ul > li.openable > ul,
+  .app .app-content .app-navigation-horizontal nav > ul li.openable.active > ul {
+    padding-top: 10px;
+  }
+  .app .app-content .app-navigation-horizontal nav > ul > li.openable svg,
+  .app .app-content .app-navigation-horizontal nav > ul li.openable.active svg {
+    display: none;
+  }
+  .app .app-content .app-navigation-horizontal nav > ul > li.openable > a {
+    background: rgba(0, 0, 0, 0.3);
+  }
+  .app .app-content .app-navigation-horizontal nav > ul li > ul > li {
+    width: 33%;
+  }
+  .app .app-content .app-navigation-horizontal nav > ul li > ul > li > a {
+    margin-right: 0;
+    padding: 5px 20px;
+  }
+  .app .app-content .app-navigation-horizontal nav > ul li > ul > li.active a,
+  .app .app-content .app-navigation-horizontal nav > ul li > ul > li.active a:hover, .app .app-content .app-navigation-horizontal nav > ul li > ul > li:hover a,
+  .app .app-content .app-navigation-horizontal nav > ul li > ul > li:hover a:hover {
+    border: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .app .app-header .app-header-logo.app-header-logo-light {
+    background-position: left center !important;
+    height: 50px;
+    margin: 5px 0;
+    width: 50px;
+  }
+}
+
+@media (max-width: 575px) {
+  .fluid-button {
+    display: none;
+  }
+  .app .app-content .app-navigation-horizontal nav > ul li > ul > li {
+    width: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .app .row {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  .app.app-sidepanel-open .app-sidepanel {
+    max-width: 90%;
+  }
+}
+
+/***************************************************
+  ****************** Login Portlet *******************
+  ***************************************************/
+.app-login .app-container {
+  text-align: center;
+}
+
+.app-login .app-container .app-login-box {
+  width: auto;
+  text-align: right;
+  display: inline-grid;
+  max-width: 600px;
+  margin: 50px;
+}
+
+.app-login .app-container .app-login-box .app-login-box-container .portlet-content {
+  padding: 0;
+}
+
+.app-login .app-container .app-login-box .app-login-box-container .input-checkbox-wrapper input[type="checkbox"] {
+  position: relative;
+  top: 4px;
+  margin-right: 5px;
+}
+
+.app-login .app-container .app-login-box .app-login-box-container .button-holder {
+  margin: 10px 0 0;
+}
+
+.app-login .app-container .app-login-box .app-login-box-container .button-holder button.btn-primary {
+  width: 100%;
+  font-weight: 400;
+}
+
+.app-login .app-container .app-login-box .app-login-box-container .navigation {
+  position: relative;
+}
+
+.app-login .app-container .app-login-box .app-login-box-container .navigation ul.list-unstyled {
+  padding: 0;
+  margin: 10px 0 0;
+}
+
+.app-login .app-container .app-login-box .app-login-box-container .navigation ul.list-unstyled li {
+  margin: 0;
+  width: 100%;
+}
+
+.app-login .app-container .app-login-box .app-login-box-container .navigation ul.list-unstyled li:first-child {
+  margin-bottom: 10px;
+}
+
+.app-login .app-container .app-login-box .app-login-box-container .navigation ul.list-unstyled li:first-child a {
+  background: var(--info-light);
+}
+
+.app-login .app-container .app-login-box .app-login-box-container .navigation ul.list-unstyled li a {
+  display: block;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  padding: 5px 20px;
+  line-height: 28px;
+  text-decoration: none;
+  font-weight: 400;
+  transition: all 100ms ease-in;
+  background: var(--danger-light);
+  color: #fff;
+  font-size: 1em;
+}
+
+.app-login .app-container .app-login-box .app-login-box-container .navigation ul.list-unstyled li a span {
+  text-decoration: none;
+}
+
+.app-login .app-container .app-login-box .app-login-box-container .navigation:before {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  line-height: 40px;
+  text-align: center;
+  font-weight: 700;
+  color: #7f8fa4;
+  content: "یا";
+  display: block;
+  margin: 20px auto 25px;
+}
+
+.app-login .app-container .app-login-box .app-login-box-container .navigation:after {
+  content: " ";
+  width: 40px;
+  height: 40px;
+  border: 1px solid #dbe0e4;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(20px) rotate(-45deg);
+}
+
+.app-login .app-container .app-login-box .app-login-box-container .portlet {
+  margin: 0;
+}
+
+.app-login .app-container .app-login-box .app-login-box-container label {
+  margin: 0;
+}
+
+.app-login .app-container .app-login-box .app-login-box-container > .portlet-login {
+  width: 290px;
+}
+
+.app-login .app-container .app-login-box .app-login-box-container > #content {
+  padding-top: 0;
+}
+
+.app-login .app-container .app-login-box .app-login-box-container > #content .portlet-content .portlet-icon-back {
+  display: none;
+}
+
+.app-login .app-container .app-login-box .app-login-box-container > #content .lexicon-icon.lexicon-icon-asterisk {
+  fill: var(--danger-light);
+  height: 0.5em;
+  margin-top: -3px;
+  width: 0.5em;
+}
+
+.app-login .app-container .app-login-box .app-login-box-container > #content > .pishkhan {
+  display: none;
+}
+
+.app-login .app-container .app-login-box .app-login-box-container > #content > .columns-max .portlet-body > form[action*="create_account"] {
+  max-width: 540px;
+}
+
+.app-login .app-container .app-login-box .app-login-box-container > #content > .columns-max .portlet-body > form[action*="create_account"] .button-holder .btn {
+  width: auto;
+  padding-right: 35px;
+  padding-left: 35px;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.app-login .app-container .app-login-box .app-login-box-container > #content > .columns-max .portlet-body > form[action*="create_account"] .navigation .list-unstyled {
+  display: flex;
+  justify-content: space-between;
+}
+
+.app-login .app-container .app-login-box .app-login-box-container > #content > .columns-max .portlet-body > form[action*="create_account"] .navigation .list-unstyled li {
+  width: calc(50% - 10px);
+}
+
+.app-login .app-container .app-login-box .app-login-box-container > #content > .columns-max .portlet-body > form[action*="create_account"] .navigation .list-unstyled li:last-child {
+  margin-left: auto;
+}
+
+.app-login .app-container .app-login-box .app-login-box-container > #content > .columns-max .portlet-body > form[action*="forgot_password"] {
+  max-width: 290px;
+}
+
+.app-login .app-container .app-login-box .app-login-box-container > #content > .columns-max .portlet-body > form[action*="forgot_password"] .button-holder > button {
+  margin-top: 20px;
+}
+
+.app-login .app-container .app-login-box .app-login-box-container > #content > .columns-max .portlet-body > form[action*="login"] {
+  max-width: 290px;
+}
+
+.app-login .app-container .app-login-box .app-login-box-container .portlet-layout .portlet-header {
+  margin: 0;
+}
+
+.app-login .app-container .app-login-box .app-login-box-container .taglib-captcha {
+  margin-top: 0;
+}
+
+.app-login .app-container .app-login-box .app-login-box-container .taglib-captcha .input-text-wrapper {
+  float: none;
+}
+
+/***************************************************
+  ****************** Backdrop Filter *****************
+  ***************************************************/
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+  .app-login .app-login-box {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #fff;
+    font-weight: 300;
+    text-shadow: 0 0 2px #000;
+  }
+  .app-login .app-login-box .app-login-box-user img {
+    border-color: #fff;
+  }
+  .app-login .app-login-box .app-login-box-title .title {
+    color: #fff;
+  }
+  .app-login .app-login-box .app-login-box-title .subtitle {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  .app-login .app-login-box .form-control {
+    border-color: transparent;
+  }
+  .app-login .app-login-box .app-login-box-container .login-container .navigation:before {
+    color: #fff;
+  }
+  .app-login .app-login-box .app-login-box-container .login-container .navigation:after {
+    border-color: #fff;
+  }
+  .app-login .app-login-box .app-login-box-footer {
+    background: rgba(255, 255, 255, 0.3);
+    color: rgba(0, 0, 0, 0.7);
+    text-shadow: none;
+  }
+  .app-login .app-login-box .portlet-decorate .portlet-content {
+    background: transparent;
+  }
+}
+
+/***************************************************
+  ********************* Portlets *********************
+  ***************************************************/
+.app {
+  overflow: initial;
+}
+
+.app .portlet {
+  clear: both;
+  margin: 0;
+}
+
+.app .portlet > .portlet-topper {
+  border: 1px solid #dbe0e4;
+  border-radius: 5px 5px 0 0;
+  z-index: 1;
+}
+
+.app .portlet-column-content.empty {
+  padding: 0;
+}
+
+.app .app-container .app-content::before {
+  display: none;
+}
+
+.sortable-layout-drag-indicator {
+  background: #7f8fa4;
+  border-radius: 6px;
+}
+
+.sortable-layout-drag-indicator::before {
+  content: "+";
+  display: block;
+  position: absolute;
+  border-radius: 1em;
+  right: calc(50% - 0.5em);
+  top: calc(-0.5em + 3px);
+  width: 1em;
+  height: 1em;
+  background: #7f8fa4;
+  font-size: 22px;
+  line-height: 1em;
+  text-align: center;
+  color: #fff;
+  font-weight: 300;
+}
+
+.sortable-layout-drag-indicator ~ .flipped .portlet-column-content.empty {
+  padding: 30px;
+  background: #e8eaeb;
+  border: 1px dashed #d0d2d3;
+  margin: -0.5px 0;
+  height: calc(100% + 1px);
+}
+
+.sortable-layout-drag-indicator ~ .flipped .portlet-column:empty {
+  margin-bottom: 24px;
+}
+
+.app .app-heading .heading-elements [data-block-expand] {
+  display: none;
+}
+
+.portlet.open > .portlet-topper,
+.portlet:hover > .portlet-topper,
+.portlet.focus > .portlet-topper {
+  opacity: 1;
+  transform: translateY(-65%);
+}
+
+@media (max-width: 575px) {
+  .portlet > .portlet-topper,
+  .portlet.open > .portlet-topper,
+  .portlet:hover > .portlet-topper,
+  .portlet.focus > .portlet-topper {
+    transform: translateY(5px);
+  }
+}
+
+.portlet-size-xs [data-heading-element] {
+  position: relative !important;
+  top: 0 !important;
+  right: 0 !important;
+  left: 0 !important;
+  float: left;
+  margin-top: -15px;
+  margin-bottom: 15px;
+}
+
+.portlet-size-xs [data-widget] {
+  clear: both;
+}
+
+/***************************************************
+  ********************** Forms ***********************
+  ***************************************************/
+.app .portlet-body > .portlet-forms .ddm-form-basic-info,
+.app .portlet-body > .portlet-forms .lfr-ddm-form-page-title,
+.app .portlet-body > .portlet-forms .lfr-ddm-form-page-description {
+  display: none;
+}
+
+.app .portlet-body > .portlet-forms .ddm-form-builder-app {
+  padding: 0;
+}
+
+.app .portlet-body > .portlet-forms .lfr-ddm-form-container .lfr-ddm-form-page {
+  padding: 0;
+}
+
+.app .portlet-body > .portlet-forms .ddm-form-builder-app .lfr-ddm-form-page > .row {
+  margin: 0 -15px 15px;
+}
+
+.app .portlet-body > .portlet-forms .ddm-form-builder-app .lfr-ddm-form-page > .row:last-child {
+  margin-bottom: 0;
+}
+
+.app .portlet-body > .portlet-forms .dropdown,
+.app .portlet-body > .portlet-forms .dropup {
+  float: none;
+}
+
+.app .portlet-body > .portlet-forms .dropdown .btn,
+.app .portlet-body > .portlet-forms .dropup .btn {
+  padding: 0;
+}
+
+.app .portlet-body > .portlet-forms label {
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.app .portlet-body > .portlet-forms label .reference-mark {
+  color: var(--danger-light);
+  margin-top: -3px;
+  font-size: 0.6em;
+}
+
+.app .portlet-body > .portlet-forms .form-control {
+  font-size: 1em;
+}
+
+.app .portlet-body > .portlet-forms .form-control.select-field-trigger {
+  font-size: initial;
+  padding: 0.44rem 0.8rem;
+}
+
+.app .portlet-body > .portlet-forms .form-control.select-field-trigger .option-selected {
+  font-size: 0.8em;
+}
+
+.app .portlet-body > .portlet-forms .form-control.select-field-trigger .select-arrow-down-container {
+  color: #7f8fa4;
+}
+
+.app .portlet-body > .portlet-forms .form-control.select-field-trigger .select-arrow-down-container .lexicon-icon {
+  margin: 1px -5px 0 0;
+}
+
+.app .portlet-body > .portlet-forms .lfr-ddm-form-container .lfr-ddm-form-pagination-controls button {
+  margin-bottom: 5px;
+}
+
+.app .portlet-body > .portlet-forms .form-text,
+.app .portlet-body > .portlet-forms .help-block {
+  font-size: 0.9em;
+  margin-bottom: 0;
+}
+
+.app .portlet-body > .portlet-forms .form-text + .form-feedback-group .help-block {
+  margin-top: 0;
+}
+
+.app .portlet-body > .portlet-forms + .icons-container.lfr-meta-actions {
+  display: none;
+  border-top: 1px solid #dbe0e4;
+}
+
+.app .portlet-body > .portlet-forms + .icons-container.lfr-meta-actions .btn.btn-link {
+  border-color: #dbe0e4;
+  background: #edeff0;
+  color: #7f8fa4;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.app .portlet-body > .portlet-forms + .icons-container.lfr-meta-actions .btn.btn-link a {
+  color: #7f8fa4;
+}
+
+.app .portlet-body > .portlet-forms + .icons-container.lfr-meta-actions .btn.btn-link a svg {
+  font-size: 1.4em;
+  margin-left: 2px;
+  position: relative;
+  top: 1px;
+}
+
+.app .portlet-body > .portlet-forms .btn.btn-primary {
+  font-size: 1em;
+  min-width: 100px;
+}
+
+.app .portlet-body > .portlet-forms .btn[aria-label="calendar"] {
+  line-height: 22px;
+}
+
+.app .portlet-body > .portlet-forms textarea.form-control {
+  height: auto;
+}
+
+.app .portlet-body > .portlet-forms .multi-step-indicator .multi-step-indicator-label {
+  font-size: 1em;
+}
+
+/***************************************************
+  ******************* Notification *******************
+  ***************************************************/
+.notification-row {
+  padding: 11px 14px;
+  color: #454545;
+  border: 1px solid #dbe0e4;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.notification-row .notification-row__btn {
+  display: none;
+}
+
+.notification-row__title {
+  max-width: 80%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  float: left;
+}
+
+/***************************************************
+  ****************** Redesign UI *******************
+  ***************************************************/
+.app .btn.btn-icon-fixed:not(.btn-default):not(.btn-secondary) {
+  border: 0 !important;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.app .btn.btn-icon-fixed:not(.btn-default):not(.btn-secondary) span[class^="icon-"] {
+  height: 40px;
+}
+
+.app .alert {
+  border: 0 !important;
+  line-height: 1.7;
+  font-weight: 450;
+}
+
+.app .alert.alert-primary {
+  background: var(--primary-bg);
+  color: var(--primary-medium);
+}
+
+.app .alert.alert-success {
+  background: var(--success-bg);
+  color: var(--success-medium);
+}
+
+.app .alert.alert-info {
+  background: var(--info-bg);
+  color: var(--info-medium);
+}
+
+.app .alert.alert-warning {
+  background: var(--warning-bg);
+  color: var(--warning-dark);
+}
+
+.app .alert.alert-danger {
+  background: var(--danger-bg);
+  color: var(--danger-medium);
+}
+
+.app .alert.alert-violet {
+  background: var(--violet-bg);
+  color: var(--violet-medium);
+}
+
+.app .label {
+  padding: 6px 12px;
+  border-radius: 50px;
+  font-weight: 550;
+  line-height: 1;
+  font-size: 0.75em;
+}
+
+.app .label.label-primary {
+  background: var(--primary-bg) !important;
+  color: var(--primary-medium) !important;
+}
+
+.app .label.label-success {
+  background: var(--success-bg) !important;
+  color: var(--success-medium) !important;
+}
+
+.app .label.label-info {
+  background: var(--info-bg) !important;
+  color: var(--info-dark) !important;
+}
+
+.app .label.label-warning {
+  background: var(--warning-bg) !important;
+  color: var(--warning-dark) !important;
+}
+
+.app .label.label-danger {
+  background: var(--danger-bg) !important;
+  color: var(--danger-medium) !important;
+}
+
+.app .label.label-violet {
+  background: var(--violet-bg) !important;
+  color: var(--violet-medium) !important;
+}
+
+.app .form-control {
+  height: 44px;
+  padding: 9px 12px;
+  border-radius: 6px;
+  border: 2px solid #e0e2e3 !important;
+}
+
+.app .form-group > div > div[class$="-control"] {
+  height: 44px;
+  border-radius: 6px;
+  border: 2px solid #e0e2e3 !important;
+}
+
+.app .form-control:focus,
+.app .form-group > div > div[class$="-control"]:focus {
+  border-color: var(--info-light) !important;
+}
+
+.app label {
+  font-size: 0.9em;
+}
