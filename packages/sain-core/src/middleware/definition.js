@@ -4,7 +4,7 @@ import i18n from "../utils/replaceVariables";
 import { direction } from "./direction";
 import merge from "lodash/merge";
 
-export function definitions(name, properties, config) {
+export function definitions(name, properties, configs) {
   const developmentMode = window.Liferay.Language.available ? false : true;
   let app = {
     id: Date.now() + String(Math.random()).substr(2),
@@ -18,10 +18,10 @@ export function definitions(name, properties, config) {
 
   if (developmentMode) {
     app.contextPath = `/o/${app.name}/`;
-    app.configuration = configuration(app);
+    app.configuration = configuration(app, configs.configuration);
 
     // const { default: override } = require(`../../../../packages/${app.name}/src/configs`);
-    app = merge(app, config);
+    app = merge(app, configs);
 
     console.log(app);
 
