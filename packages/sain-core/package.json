@@ -1,6 +1,6 @@
 {
 	"name": "@sainui/core",
-	"version": "1.0.12",
+	"version": "1.0.13",
 	"repository": "https://github.com/sepehr-afzar-iranian/liferay-ui",
 	"description": "Sain Liferay React Portlet Core",
 	"dependencies": {
