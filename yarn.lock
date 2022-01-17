@@ -2455,7 +2455,7 @@ babel-preset-flow@^6.23.0:
   dependencies:
     babel-plugin-transform-flow-strip-types "^6.22.0"
 
-babel-preset-liferay-standard@2.28.2:
+babel-preset-liferay-standard@2.28.2, babel-preset-liferay-standard@^2.28.2:
   version "2.28.2"
   resolved "https://registry.yarnpkg.com/babel-preset-liferay-standard/-/babel-preset-liferay-standard-2.28.2.tgz#a9203506b94ed748d15c1f1816aa3740c9837ae2"
   integrity sha512-uUGZmq8OUfqn1DnYONdt7APJLm+xB+1/XcgtTAyNMdevsdfcFiDBesHF+1PWl2MMw9Oy+sSZi9YzMNCggNn/5g==
@@ -3413,13 +3413,6 @@ cookie@0.4.1:
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/cookie/-/cookie-0.4.1.tgz#afd713fe26ebd21ba95ceb61f9a8116e50a537d1"
   integrity sha512-ZwrFkGJxUR3EIoXtO+yVE69Eb7KlixbaeAWfBQB9vVsNn/o+Yw69gBWSSDK825hQNdN+wF8zELf3dFNl/kxkUA==
-
-copy-assets@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/copy-assets/-/copy-assets-1.0.3.tgz#45e5fc097d446fbb2a90a783377573e9ce6cce97"
-  integrity sha512-cWXjEvDXOfVvT53XHPV6AG0W+Re9sf3ga2FsNQ8RG0xCurF17pt+G0BgvavrJQ7FYydlpNwf0+6z4TZ+rtc0Fw==
-  dependencies:
-    minimist "^1.2.5"
 
 copy-concurrently@^1.0.0:
   version "1.0.5"

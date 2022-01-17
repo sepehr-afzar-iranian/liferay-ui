@@ -1,4 +1,20 @@
 {
+	"packages": {
+		"/": {
+			"plugins": [],
+			".babelrc": {
+				"presets": []
+			},
+			"post-plugins": []
+		},
+		"*": {
+			"plugins": [],
+			".babelrc": {
+				"presets": []
+			},
+			"post-plugins": []
+		}
+	},
 	"no-tracking": true,
 	"verbose": true,
 	"dump-report": false,
