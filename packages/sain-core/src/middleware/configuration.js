@@ -1,5 +1,5 @@
-export function configuration(app) {
-  const config = require(`../../../../packages/${app.name}/features/configuration.json`),
+export function configuration(app, configuration) {
+  const config = configuration,
     { portletInstance, system } = config,
     portletconfigs = {},
     systemconfigs = {};
