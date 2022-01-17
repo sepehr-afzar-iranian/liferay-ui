@@ -25,8 +25,9 @@
 		"src"
 	],
 	"scripts": {
-		"build": "cross-env NODE_ENV=production babel  src --root-mode upward --out-dir lib --source-maps",
-		"prepublishOnly": "yarn build"
+		"build": "cross-env NODE_ENV=production babel --source-maps -d lib src",
+		"sass": "sass src/plugins/Transition/styles/transition.scss  lib/plugins/Transition/styles/transition.css --source-map",
+		"prepublishOnly": "yarn sass && yarn build"
 	},
 	"main": "lib/index.js",
 	"gitHead": "52fb762752c3389f327d5bf566d9a500a2bb30de"
