@@ -1,7 +1,7 @@
 {
 	"name": "@sainui/context",
 	"repository": "https://github.com/sepehr-afzar-iranian/liferay-ui",
-	"version": "1.0.19",
+	"version": "1.0.20",
 	"publishConfig": {
 		"access": "public"
 	},
