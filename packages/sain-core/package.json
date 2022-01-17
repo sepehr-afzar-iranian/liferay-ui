@@ -25,7 +25,7 @@
 		"src"
 	],
 	"scripts": {
-		"build": "cross-env NODE_ENV=production babel src --root-mode upward --out-dir lib",
+		"build": "cross-env NODE_ENV=production babel  src --root-mode upward --out-dir lib --source-maps",
 		"prepublishOnly": "yarn build"
 	},
 	"main": "lib/index.js",
