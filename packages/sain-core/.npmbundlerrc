@@ -1,60 +1,21 @@
 {
 	"no-tracking": true,
-	"config": {
-		"imports": {
-			"framework.provider": {
-				"@clayui/alert": "*",
-				"@clayui/loading-indicator": "*",
-				"axios": "*",
-				"lodash": "*",
-				"qs": "*",
-				"react": "*",
-				"react-router-dom": "*",
-				"rodal": "*",
-				"yup": "*"
-			},
-			"framework.context": {
-				"/": "*"
-			}
-		}
-	},
 	"verbose": true,
+	"dump-report": false,
+	"output": "lib",
 	"sources": [
-		"/"
+		"src"
 	],
+	"exclude": {
+		"*": true
+	},
 	"rules": [
 		{
-			"test": "\\.css$",
-			"exclude": "(node_modules|build)",
+			"test": "\\.scss$",
+			"exclude": "node_modules",
 			"use": [
-				"style-loader"
-			]
-		},
-		{
-			"test": "\\.js$",
-			"exclude": "(node_modules|build)",
-			"use": [
-				{
-					"loader": "babel-loader",
-					"options": {
-						"presets": [
-							"env",
-							"react"
-						],
-						"plugins": [
-							"transform-object-rest-spread"
-						]
-					}
-				}
+				"sass-loader"
 			]
 		}
-	],
-	"create-jar": {
-		"output-dir": "../../dist",
-		"output-filename": "ir.sain.frontend.js.react.framework.core.jar",
-		"features": {
-			"js-extender": false,
-			"web-context": "/ir.sain.frontend.js.react.framework.core"
-		}
-	}
+	]
 }
