@@ -28,5 +28,9 @@ export default function internationalization(app) {
 		getLanguageId() {
 			return app.locale && app.locale === "fa" ? "fa_IR" : "en_US";
 		},
+
+		getPathThemeImages() {
+			return "/o/classic-theme/images";
+		}
 	};
 }
