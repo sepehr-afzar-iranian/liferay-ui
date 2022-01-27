@@ -4,6 +4,9 @@ import i18n from "../utils/replaceVariables";
 import { direction } from "./direction";
 import merge from "lodash/merge";
 
+import authorization from "./authorization";
+
+
 export function definitions(name, properties, configs) {
   const developmentMode = window.Liferay.Language.available ? false : true;
   let app = {
@@ -25,9 +28,8 @@ export function definitions(name, properties, configs) {
 
     console.log(app);
 
-    if (app.token.enable) {
-      const authorization = require(developmentMode ? "./authorization" : "./authorization");
-      authorization.default(app);
+    if (app.token.enable && developmentMode) {
+      authorization(app);
     }
   } else app.siteId = themeDisplay.getScopeGroupId();
 
