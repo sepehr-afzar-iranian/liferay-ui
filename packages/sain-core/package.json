@@ -1,6 +1,6 @@
 {
 	"name": "@sainui/core",
-	"version": "1.0.22",
+	"version": "1.0.23-alpha.5+2975757",
 	"publishConfig": {
 		"access": "public"
 	},
@@ -10,7 +10,7 @@
 		"@clayui/alert": "^3.3.1",
 		"@clayui/icon": "3.0.0",
 		"@clayui/loading-indicator": "^3.0.1",
-		"@sainui/context": "^1.0.22",
+		"@sainui/context": "^1.0.23-alpha.5+2975757",
 		"axios": "^0.20.0",
 		"lodash": "^4.17.15",
 		"qs": "^6.9.1",
@@ -29,5 +29,5 @@
 		"prepublishOnly": "yarn build"
 	},
 	"main": "lib/index.js",
-	"gitHead": "52fb762752c3389f327d5bf566d9a500a2bb30de"
+	"gitHead": "2975757b859f94c62336454510be4534db644e24"
 }

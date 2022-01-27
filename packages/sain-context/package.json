@@ -1,7 +1,7 @@
 {
 	"name": "@sainui/context",
 	"repository": "https://github.com/sepehr-afzar-iranian/liferay-ui",
-	"version": "1.0.22",
+	"version": "1.0.23-alpha.5+2975757",
 	"publishConfig": {
 		"access": "public"
 	},
@@ -19,5 +19,5 @@
 		"prepublishOnly": "yarn build"
 	},
 	"main": "lib/index.js",
-	"gitHead": "c443c887c269f8e791d3745a334137f116ccca51"
+	"gitHead": "2975757b859f94c62336454510be4534db644e24"
 }
