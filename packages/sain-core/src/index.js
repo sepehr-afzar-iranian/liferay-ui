@@ -15,6 +15,7 @@ import Router from "./router/index";
 import interceptor from "./middleware/interceptor";
 import reparation from "./middleware/reparation";
 import { definitions } from "./middleware/definition";
+import internationalization from "./middleware/internationalization";
 export { definitions };
 
 // import "./styles/reset.css";
@@ -22,10 +23,8 @@ export { definitions };
 export default function index({ app, routes, children: Container }) {
   const { developmentMode, direction, markups, locale } = app;
   if (developmentMode) {
-    const internationalization = require(developmentMode
-      ? "./middleware/internationalization"
-      : "./middleware/internationalization");
-    internationalization.default(app);
+
+    internationalization(app);
 
     require(direction === "rtl" ? "./styles/liferay/rtl.css" : "./styles/liferay/ltr.css");
     require(direction === "rtl" ? "./styles/liferay/aui.rtl.css" : "./styles/liferay/aui.ltr.css");
