@@ -1,0 +1,61 @@
+{
+	"env": {
+		"browser": true,
+		"jest": true
+	},
+	"extends": ["liferay", "plugin:react/recommended", "plugin:css-modules/recommended"],
+	"globals": { "Liferay": "readonly", "themeDisplay": "readonly", "SITE_ID": "readonly","process": "readonly" },
+	"parserOptions": {
+		"ecmaVersion": 2018,
+		"ecmaFeatures": {
+			"jsx": true
+		}
+	},
+	"plugins": ["react", "react-hooks", "css-modules", "filenames"],
+	"root": true,
+	"rules": {
+		"no-console": "off",
+		"no-for-of-loops/no-for-of-loops": "off",
+		"no-return-assign": ["error", "except-parens"],
+		"react/jsx-uses-react": "error",
+		"react/jsx-uses-vars": "error",
+		"no-unused-vars": "warn",
+		"filenames/match-exported": [2, [null, "kebab", "camel", "pascal"]],
+		"react-hooks/rules-of-hooks": "error",
+		"react-hooks/exhaustive-deps": "off",
+		"css-modules/no-undef-class": "off",
+		"react/prop-types": "off",
+		"react/display-name": "off"
+	},
+	"settings": {
+		"react": {
+			"version": "detect"
+		}
+	},
+	"overrides": [
+		{
+			"files": ["packages/*/src/constants/*.js"],
+			"rules": {
+				"filenames/match-regex": [2, "^[a-z\\-]+$", true]
+			}
+		},
+		{
+			"files": ["packages/*/src/hooks/*.js"],
+			"rules": {
+				"filenames/match-regex": [2, "^use([A-Z][a-z]+)+$", true]
+			}
+		},
+		{
+			"files": ["packages/*/src/pages/*.js"],
+			"rules": {
+				"filenames/match-regex": [2, "^routes$", true]
+			}
+		},
+		{
+			"files": ["packages/*/src/pages/*/*.js"],
+			"rules": {
+				"filenames/match-regex": [2, "^(controller|model)$", true]
+			}
+		}
+	]
+}
