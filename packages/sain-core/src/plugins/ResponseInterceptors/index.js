@@ -15,7 +15,7 @@ function ResponseInterceptors() {
           payload: {
             title: "درخواست انجام نشد",
             displayType: "danger",
-            // autoClose: 10000,
+            autoClose: 10000,
             value: (error.response && error.response.data && error.response.data.title) || error.toString(),
           },
         });
