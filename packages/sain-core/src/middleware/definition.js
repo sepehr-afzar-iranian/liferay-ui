@@ -8,7 +8,12 @@ import authorization from "./authorization";
 
 
 export function definitions(name, properties, configs) {
-  const developmentMode = window.Liferay.Language.available ? false : true;
+  let developmentMode = false;
+
+  if (process.env.NODE_ENV === 'development') {
+    developmentMode = true;
+  }
+
   let app = {
     id: Date.now() + String(Math.random()).substr(2),
     name,
