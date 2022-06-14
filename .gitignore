@@ -9,3 +9,4 @@ package-lock.json
 .parcel-cache
 .parcel-ci-builds
 .parcel-ci-build.json
+.idea
