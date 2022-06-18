@@ -10,5 +10,7 @@ export function direction(locale, developmentMode) {
   if (developmentMode) {
     root.className += ` ${dir}`;
     return dir;
-  } else return  (Liferay.Language && Liferay.Language.direction) ? Liferay.Language.direction[themeDisplay.getLanguageId()] : "rtl";
+  } else {
+	  return  (Liferay.Language && Liferay.Language.direction) ? Liferay.Language.direction[themeDisplay.getLanguageId()] : "rtl";
+  }
 }
