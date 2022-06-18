@@ -7,7 +7,7 @@ export default class ErrorBoundry extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      developmentMode: window.Liferay.Language.available ? false : true,
+      developmentMode: process.env.NODE_ENV === 'development',
     };
   }
   static getDerivedStateFromError(error) {
