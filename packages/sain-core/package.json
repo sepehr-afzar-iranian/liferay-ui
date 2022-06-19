@@ -1,6 +1,6 @@
 {
 	"name": "@sainui/core",
-	"version": "1.0.24",
+	"version": "1.0.25",
 	"publishConfig": {
 		"access": "public"
 	},
@@ -10,7 +10,7 @@
 		"@clayui/alert": "^3.3.1",
 		"@clayui/icon": "3.0.0",
 		"@clayui/loading-indicator": "^3.0.1",
-		"@sainui/context": "^1.0.23",
+		"@sainui/context": "^1.0.25",
 		"axios": "^0.20.0",
 		"lodash": "^4.17.15",
 		"qs": "^6.9.1",
