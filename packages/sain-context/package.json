@@ -11,7 +11,7 @@
 		"src"
 	],
 	"dependencies": {
-		"lodash": "^4.17.15",
+		"lodash": "4.17.21",
 		"react": "16.12.0"
 	},
 	"scripts": {
