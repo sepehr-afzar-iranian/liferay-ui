@@ -20,5 +20,9 @@ A package of UI Components that use in liferay react projects
 - execute `lerna publish` and continue the steps to release a new version
 - execute `lerna -h` for more information
 
+#### Packages
+https://www.npmjs.com/package/@sainui/context
+
+https://www.npmjs.com/package/@sainui/core
 
 
